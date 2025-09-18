@@ -3,280 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fulfill Living - ศูนย์ดูแลผู้สูงอายุและผู้ป่วยพักฟื้น</title>
-    <meta name="description" content="Fulfill Living ศูนย์ดูแลผู้สูงอายุแบบครบวงจร ด้วยทีมงานมืออาชีพและบริการที่อบอุ่นเหมือนคนในครอบครัว">
+    <title>ศูนย์ดูแลผู้สูงอายุ Happy Home</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2E8B57; /* Sea Green */
-            --secondary-color: #F8F9FA; /* Very light gray */
-            --accent-color: #FF7F50; /* Coral */
-            --text-color: #343A40; /* Darker text */
-            --text-light: #6C757D;
-            --border-color: #DEE2E6;
-            --header-bg: #FFFFFF;
-            --footer-bg: #212529;
-            --border-radius: 8px;
-        }
-
-        /* --- Base Styles --- */
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { font-family: 'Sarabun', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #fff; color: var(--text-color); line-height: 1.7; }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-
-        /* --- Header / Top Bar --- */
-        .top-bar { padding: 10px 0; background-color: var(--header-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.05); height: 60px; }
-        .top-bar .container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-        .logo-text { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
-        
-        /* --- Navigation Menu --- */
-        .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; }
-        .nav-menu li a { text-decoration: none; color: var(--text-light); font-weight: 500; font-size: 1rem; padding: 5px 0; position: relative; transition: color 0.3s; }
-        .nav-menu li a:hover { color: var(--primary-color); }
-        .nav-menu li a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--primary-color); transition: width 0.3s; }
-        .nav-menu li a:hover::after { width: 100%; }
-        .header-right { display: flex; align-items: center; }
-        .contact-buttons { display: flex; margin-left: 20px; }
-        .contact-buttons a { text-decoration: none; color: white; padding: 8px 18px; border-radius: 50px; font-weight: 600; margin-left: 10px; display: inline-flex; align-items: center; gap: 8px; transition: opacity 0.3s; white-space: nowrap; }
-        .contact-buttons a:hover { opacity: 0.9; }
-        .line-button { background-color: #06C755; }
-        .tel-button { background-color: var(--primary-color); }
-        .line-button .line-logo-img { width: 20px; height: 20px; vertical-align: middle; }
-        .hamburger { display: none; cursor: pointer; font-size: 1.8rem; color: var(--text-color); margin-left: 15px; }
-
-        /* --- Hero Section (with Centered Logo) --- */
-        .hero-section {
-            position: relative;
-            height: 600px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            background-size: cover;
-            background-position: center;
-            /* เทคนิคใส่ฟิลเตอร์สีทับรูปภาพ */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.imgur.com/8aZ3YQv.jpeg');
-        }
-        .hero-logo-box {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-        .hero-logo-box img {
-            height: 60px;
-            display: block;
-        }
-        .hero-section h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin: 0 0 10px 0;
-        }
-        .hero-section p {
-            font-size: 1.4rem;
-            max-width: 700px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-
-        /* --- General Section Styling --- */
-        .section { padding: 60px 0; }
-        .section-bg { background-color: var(--secondary-color); }
-        .section-title { text-align: center; font-size: 2.2rem; font-weight: 600; margin-bottom: 10px; }
-        .section-subtitle { text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 50px auto; color: var(--text-light); }
-        
-        /* --- Services Section --- */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .service-item { text-align: center; }
-        .service-item img { width: 100%; height: 180px; object-fit: cover; border-radius: var(--border-radius); margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .service-item h3 { margin: 0; font-size: 1.1rem; font-weight: 600; }
-        
-        /* --- Team Section --- */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .team-card { background-color: #fff; padding: 20px; border: 1px solid var(--border-color); border-radius: var(--border-radius); text-align: center; }
-        .team-card img { width: 100%; height: 200px; object-fit: cover; border-radius: var(--border-radius); margin-bottom: 15px; }
-        .team-card h3 { margin: 0 0 10px 0; font-size: 1.3rem; }
-        .team-card p { color: var(--text-light); font-size: 0.95rem; }
-        
-        /* --- Video/Activities Section --- */
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
-        .video-item { position: relative; cursor: pointer; }
-        .video-item img { width: 100%; display: block; border-radius: var(--border-radius); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .video-item .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255, 255, 255, 0.9); text-shadow: 0 2px 10px rgba(0,0,0,0.3); pointer-events: none; }
-        .video-item p { text-align: center; font-weight: 600; margin-top: 15px; }
-        
-        /* --- Promotion Section --- */
-        .promo-section { background-color: var(--primary-color); color: white; text-align: center; padding: 50px 20px; }
-        .promo-section h2 { font-size: 2.5rem; margin: 0 0 10px 0; }
-        .promo-section p { font-size: 1.3rem; margin: 0 0 25px 0; }
-        .promo-button { background-color: var(--accent-color); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s; display: inline-block; }
-        .promo-button:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-
-        /* --- Footer --- */
-        .footer { background-color: var(--footer-bg); color: #ccc; padding: 50px 0; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; }
-        .footer a { color: #ccc; text-decoration: none; transition: color 0.2s; }
-        .footer a:hover { color: white; }
-        .footer h4 { color: white; font-size: 1.2rem; margin-bottom: 20px; }
-        .footer p, .footer ul { padding: 0; margin: 0; list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer i { margin-right: 10px; }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #444; font-size: 0.9rem; }
-        
-        /* --- Floating Action Buttons --- */
-        .floating-buttons-container { position: fixed; bottom: 20px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
-        .fab { width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; text-decoration: none; font-size: 1.8rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.2s ease-in-out, opacity 0.3s; }
-        .fab:hover { transform: scale(1.1); }
-        .fab-call { background-color: var(--accent-color); }
-        .fab-line { background-color: #06C755; }
-        .fab-facebook { background-color: #1877F2; }
-        .fab-scroll-top { background-color: var(--text-color); opacity: 0; visibility: hidden; transform: translateY(10px); }
-        .fab-scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-        .fab-line .line-logo-img { width: 30px; height: 30px; display: block; }
-
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 1024px) {
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background-color: var(--header-bg); box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 10px 0; gap: 0; }
-            .nav-menu.active { display: flex; }
-            .nav-menu li { width: 100%; text-align: center; }
-            .nav-menu li a { padding: 15px; display: block; width: 100%; box-sizing: border-box; }
-            .nav-menu li a::after { display: none; }
-            .hamburger { display: block; }
-            .contact-buttons a span { display: none; }
-            .line-button .line-logo-img { margin-right: 0; }
-        }
-        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) {
-            html { scroll-padding-top: 70px; }
-            .top-bar { height: 50px; }
-            .nav-menu { top: 70px; }
-            .hero-section h1 { font-size: 2.2rem; }
-            .hero-section p { font-size: 1.2rem; }
-            .video-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .fab { width: 50px; height: 50px; font-size: 1.5rem; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="top-bar">
-        <div class="container">
-            <a href="#" class="logo-text">FULFILL LIVING</a>
-            <div class="header-right">
-                <nav>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#services">บริการของเรา</a></li>
-                        <li><a href="#team">ทีมผู้เชี่ยวชาญ</a></li>
-                        <li><a href="#activities">กิจกรรม</a></li>
-                        <li><a href="#promotion">โปรโมชั่น</a></li>
-                        <li><a href="#footer">ติดต่อเรา</a></li>
-                    </ul>
-                </nav>
-                <div class="contact-buttons">
-                    <a href="https://line.me/ti/p/~YOUR_LINE_ID" target="_blank" class="line-button">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/LINE_logo.svg" alt="LINE Logo" class="line-logo-img">
-                        <span>LINE</span>
-                    </a>
-                    <a href="tel:0646262478" class="tel-button"><i class="fas fa-phone-alt"></i> <span>โทรเลย</span></a>
-                </div>
-                <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Happy Home</a>
+                <ul class="nav-menu">
+                    <li><a href="#home">หน้าหลัก</a></li>
+                    <li><a href="#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="#services">บริการของเรา</a></li>
+                    <li><a href="#gallery">แกลเลอรี</a></li>
+                    <li><a href="#contact">ติดต่อเรา</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section class="hero-section" id="hero">
-            <div class="hero-logo-box">
-                <img src="https://i.imgur.com/uGJJw98.png" alt="Fulfill Living Logo">
-            </div>
-            <h1>ดูแลผู้สูงอายุครบวงจร</h1>
-            <p>"สุขภาพดีไม่มีขาย แต่เราดูแลให้คุณ...ดุจดั่งคนในครอบครัว"</p>
-        </section>
-
-        <section class="section" id="services">
+        <section id="home" class="hero">
             <div class="container">
-                <h2 class="section-title">บริการของเรา</h2>
-                <p class="section-subtitle">Fulfill Living ให้บริการดูแลผู้สูงอายุและผู้ป่วยพักฟื้นหลากหลายรูปแบบ โดยทีมงานมืออาชีพและมากประสบการณ์</p>
-                <div class="services-grid">
-                    <div class="service-item"><img src="https://i.imgur.com/WbC6y8D.jpeg" alt="ดูแลผู้สูงอายุ"><h3>ดูแลผู้สูงอายุ</h3></div>
-                    <div class="service-item"><img src="https://i.imgur.com/g8V5b5Z.jpeg" alt="ดูแลผู้ป่วยพักฟื้น"><h3>ดูแลผู้ป่วยพักฟื้น</h3></div>
-                    <div class="service-item"><img src="https://i.imgur.com/D8X4T9c.jpeg" alt="ดูแลผู้ป่วยติดเตียง"><h3>ดูแลผู้ป่วยติดเตียง</h3></div>
-                    <div class="service-item"><img src="https://i.imgur.com/J9H7e8s.jpeg" alt="กายภาพบำบัด"><h3>กายภาพบำบัด</h3></div>
+                <h1>ดูแลคนที่คุณรัก ด้วยใจ</h1>
+                <p>มอบการดูแลที่ดีที่สุดสำหรับผู้สูงอายุ ในบรรยากาศอบอุ่นเหมือนบ้าน</p>
+                <a href="#contact" class="cta-button">ปรึกษาเราฟรี</a>
+            </div>
+        </section>
+        
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>เกี่ยวกับเรา</h2>
+                <p>ที่ Happy Home เราเชื่อว่าผู้สูงอายุทุกท่านสมควรได้รับการดูแลอย่างดีที่สุด เราจึงมุ่งมั่นสร้างสรรค์สภาพแวดล้อมที่ปลอดภัย อบอุ่น พร้อมทีมงานมืออาชีพที่พร้อมดูแลคนที่คุณรักตลอด 24 ชั่วโมง</p>
+                
+            </div>
+        </section>
+        
+        <section id="services" class="content-section bg-light">
+            <div class="container">
+                <h2>บริการของเรา</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>ดูแลรายวัน/รายเดือน</h3>
+                        <p>แพ็กเกจดูแลที่ยืดหยุ่น พร้อมอาหารสุขภาพ 3 มื้อ และการดูแลส่วนบุคคล</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>กายภาพบำบัด</h3>
+                        <p>โปรแกรมฟื้นฟูร่างกายโดยนักกายภาพบำบัดผู้เชี่ยวชาญ</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>กิจกรรมสันทนาการ</h3>
+                        <p>ส่งเสริมสุขภาพกายและใจด้วยกิจกรรมที่หลากหลายในแต่ละวัน</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-bg" id="team">
+        <section id="gallery" class="content-section">
             <div class="container">
-                <h2 class="section-title">ทีมผู้เชี่ยวชาญของเรา</h2>
-                <p class="section-subtitle">เรามีทีมสหวิชาชีพที่พร้อมให้การดูแลอย่างครบวงจร ทั้งด้านร่างกายและจิตใจ เพื่อคุณภาพชีวิตที่ดีที่สุดของผู้พักอาศัย</p>
-                <div class="team-grid">
-                    <div class="team-card"><img src="https://i.imgur.com/yvD3FfL.jpeg" alt="ทีมพยาบาล"><h3>ทีมพยาบาลวิชาชีพ</h3><p>ดูแลและประเมินสุขภาพอย่างใกล้ชิด จัดการเรื่องยาและประสานงานกับทีมแพทย์ พร้อมดูแลตลอด 24 ชั่วโมง</p></div>
-                    <div class="team-card"><img src="https://i.imgur.com/iR3E2oY.jpeg" alt="ทีมนักกายภาพ"><h3>ทีมนักกายภาพบำบัด</h3><p>วางแผนและทำกายภาพบำบัดเพื่อฟื้นฟูสมรรถภาพร่างกาย ป้องกันภาวะข้อติดและกล้ามเนื้อลีบ</p></div>
-                    <div class="team-card"><img src="https://i.imgur.com/mU7N6nB.jpeg" alt="ทีมผู้ดูแล"><h3>ทีมผู้ดูแล (Caregiver)</h3><p>ช่วยเหลือในการทำกิจวัตรประจำวันด้วยความใส่ใจ ดูแลเรื่องอาหาร ความสะอาด และเป็นเพื่อนพูดคุย</p></div>
+                <h2>แกลเลอรี</h2>
+                <p>ชมภาพบรรยากาศความสุขและความอบอุ่นภายในศูนย์ของเรา</p>
+                <div class="gallery-grid">
+                    <img src="https://via.placeholder.com/300x200.png?text=กิจกรรม" alt="ภาพกิจกรรม">
+                    <img src="https://via.placeholder.com/300x200.png?text=ห้องพัก" alt="ภาพห้องพัก">
+                    <img src="https://via.placeholder.com/300x200.png?text=พื้นที่ส่วนกลาง" alt="ภาพพื้นที่ส่วนกลาง">
                 </div>
             </div>
         </section>
 
-        <section class="section" id="activities">
+        <section id="contact" class="content-section bg-light">
             <div class="container">
-                <h2 class="section-title">กิจกรรมและบรรยากาศของเรา</h2>
-                <p class="section-subtitle">เราจัดกิจกรรมที่หลากหลายเพื่อส่งเสริมสุขภาพกายและใจ สร้างบรรยากาศที่อบอุ่นและมีความสุขในทุกๆ วัน</p>
-                <div class="video-grid">
-                    <div class="video-item"><img src="https://i.imgur.com/gOa2j2h.png" alt="กิจกรรมพัฒนาสมอง"><div class="play-icon"><i class="fas fa-play-circle"></i></div><p>กิจกรรมพัฒนาสมองในผู้สูงอายุ</p></div>
-                    <div class="video-item"><img src="https://i.imgur.com/H6e7q8L.jpeg" alt="กิจกรรมฟื้นฟูกล้ามเนื้อ"><div class="play-icon"><i class="fas fa-play-circle"></i></div><p>กิจกรรมช่วยฟื้นฟูกล้ามเนื้อสำหรับผู้สูงอายุ</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="promo-section" id="promotion">
-            <div class="container">
-                <h2>โปรโมชั่นพิเศษ!</h2>
-                <p>ค่าบริการเริ่มต้นเพียง 15,000 บาท/เดือน<br><strong>พร้อมรับสิทธิ์ ทดลองอยู่ฟรี 2 วัน!</strong></p>
-                <a href="tel:0646262478" class="promo-button">โทรปรึกษาฟรี!</a>
+                <h2>ติดต่อเรา</h2>
+                <p>สนใจเข้ารับบริการ หรือต้องการสอบถามข้อมูลเพิ่มเติม</p>
+                <p><strong>ที่อยู่:</strong> 123 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพฯ 10110</p>
+                <p><strong>โทร:</strong> 081-234-5678</p>
+                <p><strong>Email:</strong> contact@happyhome.com</p>
             </div>
         </section>
     </main>
-    
-    <footer class="footer" id="footer">
+
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col"><h4>เกี่ยวกับ Fulfill Living</h4><p>เรามุ่งมั่นให้บริการดูแลผู้สูงอายุและผู้ป่วยพักฟื้นด้วยมาตรฐานระดับสูง พร้อมด้วยความรักและความใส่ใจ ดุจคนในครอบครัว เพื่อสร้างความสุขและคุณภาพชีวิตที่ดีให้กับคนที่คุณรัก</p></div>
-                <div class="footer-col"><h4>บริการของเรา</h4><ul><li><a href="#services">ดูแลผู้สูงอายุ</a></li><li><a href="#services">ดูแลผู้ป่วยพักฟื้น</a></li><li><a href="#services">กายภาพบำบัด</a></li><li><a href="#activities">ห้องพักและสิ่งอำนวยความสะดวก</a></li></ul></div>
-                <div class="footer-col"><h4>ติดต่อเรา</h4><p><i class="fas fa-map-marker-alt"></i> 388 ซ.พหลโยธิน 40 แยก 6-1 <br>แขวงเสนานิคม เขตจตุจักร กทม. 10900</p><p><i class="fas fa-phone-alt"></i> <a href="tel:0646262478">064-626-2478</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:fulfillliving@gmail.com">fulfillliving@gmail.com</a></p><p><i class="fab fa-line"></i> LINE ID: <strong>YOUR_LINE_ID</strong></p></div>
-            </div>
-            <div class="footer-bottom"><p>&copy; 2025 Fulfill Living. All Rights Reserved.</p></div>
+            <p>&copy; 2025 Happy Home. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <div class="floating-buttons-container">
-        <a href="tel:0646262478" class="fab fab-call" title="โทรเลย"><i class="fas fa-phone-alt"></i></a>
-        <a href="https://line.me/ti/p/~YOUR_LINE_ID" target="_blank" class="fab fab-line" title="ติดต่อ LINE"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/LINE_logo.svg" alt="LINE Logo" class="line-logo-img"></a>
-        <a href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" class="fab fab-facebook" title="Facebook Page"><i class="fab fa-facebook-square"></i></a>
-        <a href="#hero" class="fab fab-scroll-top" id="scrollTopBtn" title="เลื่อนขึ้นบนสุด"><i class="fas fa-arrow-up"></i></a>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            hamburger.addEventListener('click', function() { navMenu.classList.toggle('active'); });
-            document.querySelectorAll('#nav-menu a').forEach(link => {
-                link.addEventListener('click', () => { if (navMenu.classList.contains('active')) { navMenu.classList.remove('active'); } });
-            });
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) { scrollTopBtn.classList.add('visible'); } 
-                else { scrollTopBtn.classList.remove('visible'); }
-            });
-        });
-    </script>
 </body>
 </html>
