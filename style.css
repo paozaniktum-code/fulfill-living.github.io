@@ -168,68 +168,6 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-/* ======== Floating Buttons Styling ======== */
-.floating-container {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    /* ตอนเริ่มต้น ซ่อนข้อความและขยับไปทางขวาเล็กน้อย */
-    transform: translateY(-50%) translateX(calc(100% - 50px)); 
-    transition: transform 0.3s ease-in-out;
-}
-
-/* เมื่อนำเมาส์มาวาง ให้แสดงผลเต็ม */
-.floating-container:hover {
-    transform: translateY(-50%) translateX(0);
-}
-
-.float-button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* จัดไอคอนชิดซ้าย */
-    width: 160px; /* ความกว้างเมื่อแสดงเต็ม */
-    height: 50px;
-    padding: 0 15px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.float-button i {
-    font-size: 24px;
-    width: 20px; /* กำหนดพื้นที่ไอคอน */
-    margin-right: 15px;
-    text-align: center;
-}
-
-.float-button span {
-    white-space: nowrap; /* ป้องกันข้อความตกบรรทัด */
-}
-
-/* ตั้งค่าสีสำหรับแต่ละปุ่ม */
-.float-button.phone { background-color: #27ae60; }
-.float-button.line { background-color: #00B900; }
-.float-button.facebook { background-color: #1877F2; }
-.float-button.tiktok { background-color: #000000; }
-.float-button.instagram { 
-    background: #f09433; 
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-}
-
-/* ทำให้สีเข้มขึ้นเมื่อเอาเมาส์ไปชี้ */
-.float-button.phone:hover { background-color: #1f8a4c; }
-.float-button.line:hover { background-color: #009a00; }
-.float-button.facebook:hover { background-color: #1466c9; }
-.float-button.tiktok:hover { background-color: #333333; }
-.float-button.instagram:hover { filter: brightness(0.9); }
 
 /* ======== Update for More Social Buttons ======== */
 
