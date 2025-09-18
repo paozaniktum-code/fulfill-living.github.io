@@ -227,3 +227,46 @@ footer {
 .bg-facebook { background-color: #1877F2; }
 .bg-tiktok { background-color: #000000; }
 .bg-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+/* ======== Responsive Design for Mobile ======== */
+
+/* ใช้กฎนี้เมื่อหน้าจอมีความกว้างน้อยกว่าหรือเท่ากับ 768px (ขนาดของแท็บเล็ตและมือถือ) */
+@media (max-width: 768px) {
+
+    /* --- 1. ปรับการจัดวางของ Navbar --- */
+    .navbar .container {
+        flex-direction: column; /* เปลี่ยนการเรียงจากแนวนอนเป็นแนวตั้ง */
+        gap: 15px; /* เพิ่มระยะห่างระหว่างโลโก้และเมนู */
+    }
+
+    /* --- 2. ปรับการจัดวางของรายการเมนู --- */
+    .navbar .nav-menu {
+        flex-direction: column; /* ทำให้รายการเมนูเรียงเป็นแนวตั้ง */
+        align-items: center; /* จัดให้อยู่ตรงกลาง */
+        gap: 10px;
+    }
+
+    .navbar .nav-menu li {
+        margin-left: 0; /* ลบระยะห่างด้านซ้ายของเมนู (ของเดิม) */
+    }
+
+    /* --- 3. ปรับขนาดตัวอักษรของ Hero Section --- */
+    .hero h1 {
+        font-size: 2.5rem; /* ลดขนาดฟอนต์หัวข้อหลักให้พอดีกับมือถือ */
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    /* --- 4. ปรับปุ่มลอยให้ไม่ใหญ่เกินไปบนมือถือ --- */
+    .fab-menu-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab-button {
+        width: 55px;
+        height: 55px;
+    }
+}
