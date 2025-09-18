@@ -230,3 +230,39 @@ footer {
 .float-button.facebook:hover { background-color: #1466c9; }
 .float-button.tiktok:hover { background-color: #333333; }
 .float-button.instagram:hover { filter: brightness(0.9); }
+
+/* ======== Update for More Social Buttons ======== */
+
+/* ปรับโค้ดเดิมโดยรวมปุ่มใหม่เข้าไป
+  เพื่อให้ปุ่มที่เป็นไอคอนอย่างเดียวมีขนาดเท่ากันทั้งหมด
+*/
+.line-btn,
+.facebook-btn,
+.tiktok-btn,
+.instagram-btn {
+    background-color: #00B900; /* สีพื้นฐาน (จะถูกเขียนทับด้านล่าง) */
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+.line-btn i,
+.facebook-btn i,
+.tiktok-btn i,
+.instagram-btn i {
+    font-size: 32px; /* ปรับขนาดไอคอนให้พอดี */
+}
+
+/* --- กำหนดสีเฉพาะสำหรับแต่ละปุ่มใหม่ --- */
+.facebook-btn {
+    background-color: #1877F2; /* สี Facebook */
+}
+
+.tiktok-btn {
+    background-color: #000000; /* สี TikTok */
+}
+
+.instagram-btn {
+    /* สี Gradient ของ Instagram */
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
