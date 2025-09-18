@@ -110,8 +110,22 @@
     </div>
 
 </div>
+        <script>
+    // === JavaScript for Back to Top Button ===
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    window.addEventListener('scroll', () => {
+        // ถ้าเลื่อนหน้าจอลงมามากกว่า 300 pixels
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+</script>
 </body>
 </html>
+
 
 
 
