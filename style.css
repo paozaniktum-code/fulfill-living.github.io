@@ -168,39 +168,107 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+/* ======== Floating Action Button Menu (แบบใหม่) ======== */
 
-/* ======== Update for More Social Buttons ======== */
+.fab-menu-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1010;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* จัดปุ่มชิดขวา */
+    gap: 20px; /* ระยะห่างระหว่างปุ่ม Back-to-top และปุ่ม Contact */
+}
 
-/* ปรับโค้ดเดิมโดยรวมปุ่มใหม่เข้าไป
-  เพื่อให้ปุ่มที่เป็นไอคอนอย่างเดียวมีขนาดเท่ากันทั้งหมด
-*/
-.line-btn,
-.facebook-btn,
-.tiktok-btn,
-.instagram-btn {
-    background-color: #00B900; /* สีพื้นฐาน (จะถูกเขียนทับด้านล่าง) */
+/* --- สไตล์ปุ่มวงกลม (ใช้ร่วมกัน) --- */
+.fab-button {
     width: 60px;
     height: 60px;
-    align-self: flex-end;
+    border-radius: 50%;
+    background-color: var(--primary-color); /* สีหลักของเว็บ */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
 }
 
-.line-btn i,
-.facebook-btn i,
-.tiktok-btn i,
-.instagram-btn i {
-    font-size: 32px; /* ปรับขนาดไอคอนให้พอดี */
+.fab-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* --- กำหนดสีเฉพาะสำหรับแต่ละปุ่มใหม่ --- */
-.facebook-btn {
-    background-color: #1877F2; /* สี Facebook */
+.fab-button i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
 }
 
-.tiktok-btn {
-    background-color: #000000; /* สี TikTok */
+
+/* --- กลุ่มปุ่มเมนูติดต่อ --- */
+.fab-contact-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.instagram-btn {
-    /* สี Gradient ของ Instagram */
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+/* --- ปุ่มหลัก (+) --- */
+.fab-main-button {
+    z-index: 1012;
 }
+
+/* --- กลุ่มปุ่มย่อย (ซ่อนไว้ตอนแรก) --- */
+.fab-options {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* ซ่อนปุ่มย่อยไว้ */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* --- เอฟเฟกต์เมื่อนำเมาส์ไปวางบนกลุ่มปุ่ม --- */
+.fab-contact-group:hover .fab-options {
+    /* แสดงปุ่มย่อย */
+    opacity: 1;
+    transform: translateY(-80px); /* ขยับขึ้นไปเหนือปุ่มหลัก */
+    pointer-events: auto;
+}
+
+/* ทำให้ไอคอน + หมุนเป็น x */
+.fab-contact-group:hover .fab-main-button i {
+    transform: rotate(45deg);
+}
+
+/* --- ปุ่มกลับไปด้านบน (Back to Top) --- */
+#back-to-top-btn {
+    background-color: #555;
+    /* ซ่อนไว้ตอนแรก */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+#back-to-top-btn.visible {
+    /* แสดงผลเมื่อเลื่อนจอลงมา */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* --- กำหนดสีให้แต่ละปุ่มโซเชียล --- */
+.bg-phone { background-color: #27ae60; }
+.bg-line { background-color: #00B900; }
+.bg-facebook { background-color: #1877F2; }
+.bg-tiktok { background-color: #000000; }
+.bg-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
