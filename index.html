@@ -9,6 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+         /* สร้าง container เพื่อจัดกลาง */
+    .logo-container {
+        display: flex;
+        justify-content: center; /* จัดกึ่งกลางแนวนอน */
+        align-items: center;    /* จัดกึ่งกลางแนวตั้ง */
+        min-height: 100vh;      /* ทำให้ container สูงเต็มหน้าจอ */
+        background-color: #f0f0f0; /* สีพื้นหลังเพื่อให้เห็นภาพชัด */
+    }
+
+    /* สไตล์ของโลโก้ (เหมือนเดิม) */
+    .top-right-logo {
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .top-right-logo img {
+        height: 60px;
+        display: block; /* แก้ปัญหาขอบล่างของรูป */
+    }
         :root {
             --primary-color: #2E8B57; /* Sea Green */
             --secondary-color: #F8F9FA; /* Very light gray */
@@ -296,6 +316,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div class="logo-container">
+        <div class="top-right-logo">
+            <img src="https://i.imgur.com/uGJJw98.png" alt="Fulfill Living Logo">
+        </div>
+    </div>
 
     <header class="top-bar">
         <div class="container">
@@ -435,6 +460,7 @@
 
 </body>
 </html>
+
 
 
 
