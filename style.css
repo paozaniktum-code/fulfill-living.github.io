@@ -272,3 +272,7 @@ footer {
 .bg-facebook { background-color: #1877F2; }
 .bg-tiktok { background-color: #000000; }
 .bg-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+/* แก้ปัญหาคลิกที่ไอคอนแล้วลิงก์ไม่ทำงาน */
+.fab-button i {
+    pointer-events: none;
+}
