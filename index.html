@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,15 +29,15 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">
-                <img src="https://i.postimg.cc/NFbrH55N/LOGO-removebg-preview.png" alt="Logo">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/180x50.png?text=Your+Logo" alt="Logo">
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#hero">หน้าแรก</a></li>
+                    <li><a href="index.html">หน้าแรก</a></li>
                     <li><a href="services.html">บริการของเรา</a></li>
                     <li><a href="#gallery">แกลอรี่</a></li>
-                    <li><a href="#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="#introduction">เกี่ยวกับเรา</a></li>
                     <li><a href="#contact">ติดต่อเรา</a></li>
                 </ul>
             </nav>
@@ -46,17 +48,50 @@
     </header>
     
     <div class="mobile-menu" id="mobile-menu">
-        <a href="#hero">หน้าแรก</a>
+        <a href="index.html">หน้าแรก</a>
         <a href="services.html">บริการของเรา</a>
         <a href="#gallery">แกลอรี่</a>
-        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#introduction">เกี่ยวกับเรา</a>
         <a href="#contact">ติดต่อเรา</a>
     </div>
 
-   <section id="hero">
-    <img src="https://i.postimg.cc/LX9W9Xq4/FULFILL-LIVING22.png" alt="ฟูลฟิลลิฟวิ่ง ศูนย์ดูแลผู้สูงอายุครบวงจร">
-</section>
+    <section id="hero">
+        <div class="container">
+            <img src="main-banner.jpg" alt="ฟูลฟิลลิฟวิ่ง ศูนย์ดูแลผู้สูงอายุครบวงจร">
+        </div>
+    </section>
 
+    <section id="introduction" class="section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="intro-title">ศูนย์ดูแลผู้สูงอายุและผู้ป่วย ฟูลฟิล ลิฟวิ่ง</h2>
+                <p class="intro-address">388 ซอยพหลโยธิน 40 แยก 6-1 แขวงเสนานิคม เขตจตุจักร กรุงเทพมหานคร</p>
+                
+                <p class="intro-text">
+                    <b>ฟูลฟิล ลิฟวิ่ง (Fulfill Living)</b> ศูนย์ดูแลผู้สูงอายุครบวงจรที่เราสร้างขึ้นจากความตั้งใจในการดูแลคนที่คุณรักด้วยมาตรฐานระดับมืออาชีพ ทีมงานของเรามีทั้งพยาบาลและเจ้าหน้าที่ผู้เชี่ยวชาญ คอยดูแลตลอด 24 ชั่วโมง พร้อมจัดกิจกรรมฟื้นฟูสุขภาพกายและสมองเฉพาะบุคคล เพื่อให้ผู้สูงอายุได้ใช้ชีวิตอย่างมีคุณค่าและความสุข
+                </p>
+                <p class="intro-text">
+                    ที่ ฟูลฟิล ลิฟวิ่ง เราเข้าใจว่าการดูแลผู้สูงอายุไม่ใช่เพียงแค่เรื่องสุขภาพ แต่ยังรวมถึงความอบอุ่นใจ ความปลอดภัย และคุณภาพชีวิตที่ดี ภายในศูนย์ดูแลของเราจึงถูกออกแบบให้มีบรรยากาศเหมาะสม มีระบบป้องกันอุบัติเหตุ และอาหารที่ปรุงตามหลักโภชนาการเฉพาะสำหรับแต่ละบุคคล
+                </p>
+
+                <div class="intro-buttons">
+                    <a href="tel:08xxxxxxxx" class="btn-intro btn-call"><i class="fas fa-phone"></i> โทรหาเรา</a>
+                    <a href="https://line.me/ti/p/~yourlineid" target="_blank" class="btn-intro btn-line"><i class="fab fa-line"></i> ติดต่อทางไลน์</a>
+                    <a href="https://www.facebook.com/your-page" target="_blank" class="btn-intro btn-facebook"><i class="fab fa-facebook-f"></i> ติดตาม</a>
+                </div>
+
+                <div class="intro-promotion">
+                    <h2><span class="promo-highlight">โปรโมชั่น</span> ราคาค่าบริการเริ่มต้น 15,000 บาท/เดือน <span class="promo-highlight">หรือ ทดลองอยู่ ฟรี 2 วัน</span></h2>
+                </div>
+
+                <div class="intro-highlight-box">
+                    <h3>ฟูลฟิล ลิฟวิ่ง (Fulfill Living)</h3>
+                    <p>รับดูแลผู้สูงวัย | ผู้ป่วยพักฟื้น | ผู้พิการทุพพลภาพ | ผู้ป่วยรอรักษาตัวติดโควิด (ไม่รุ่นแรง)<br><b>ราคาเริ่มต้นที่ 15,000 บาท</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="services" class="container section">
         <h2 class="section-title">บริการของเรา</h2>
         <div class="service-grid">
@@ -77,85 +112,46 @@
             </div>
         </div>
     </section>
-    <section id="about" class="section">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="https://i.postimg.cc/K8Q58jn5/5.png" alt="บรรยากาศศูนย์ดูแลผู้สูงอายุ">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">เกี่ยวกับเรา</h2>
-                <p>เราเชื่อว่าผู้สูงอายุทุกท่านสมควรได้รับการดูแลที่ดีที่สุดในสภาพแวดล้อมที่อบอุ่น ปลอดภัย และเหมือนอยู่บ้าน ทีมงานของเราประกอบด้วยพยาบาลและผู้เชี่ยวชาญที่มีประสบการณ์ พร้อมมอบความรักและความเอาใจใส่ให้แก่คนที่คุณรัก</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> ทีมงานมืออาชีพและมีประสบการณ์</li>
-                    <li><i class="fas fa-check-circle"></i> บรรยากาศอบอุ่น เป็นกันเอง</li>
-                    <li><i class="fas fa-check-circle"></i> อาหารสะอาด ปลอดภัย ถูกหลักโภชนาการ</li>
-                    <li><i class="fas fa-check-circle"></i> กิจกรรมสันทนาการเพื่อสุขภาพใจ</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-<section id="rooms" class="section">
+
+    <section id="rooms" class="section">
         <div class="container">
             <h2 class="section-title">ห้องพักหลายแบบ ตอบโจทย์การใช้ชีวิตผู้สูงวัย</h2>
             <div class="room-grid">
-
                 <div class="room-card">
-                    <div class="room-card-image">
-                        <img src="https://i.postimg.cc/PqQKnTQG/1.png" alt="ห้องพักแบบ VIP">
-                    </div>
+                    <div class="room-card-image"><img src="https://i.imgur.com/sY7vH4w.jpg" alt="ห้องพักแบบ VIP"></div>
                     <div class="room-card-content">
                         <h3>ห้อง VIP</h3>
                         <p>ความเป็นส่วนตัวสูงสุด พร้อมสิ่งอำนวยความสะดวกครบครัน เหมาะสำหรับการพักฟื้นที่ต้องการความเงียบสงบ</p>
                     </div>
                 </div>
-
                 <div class="room-card">
-                    <div class="room-card-image">
-                        <img src="https://i.postimg.cc/W3p82C5d/2.png" alt="ห้องพักแบบรวม">
-                    </div>
+                    <div class="room-card-image"><img src="https://i.imgur.com/eP4L98W.jpg" alt="ห้องพักแบบรวม"></div>
                     <div class="room-card-content">
                         <h3>ห้องรวม</h3>
                         <p>บรรยากาศอบอุ่น มีเพื่อนพูดคุย ไม่เหงา อยู่ภายใต้การดูแลอย่างใกล้ชิดตลอดเวลา</p>
                     </div>
                 </div>
-
                 <div class="room-card">
-                    <div class="room-card-image">
-                        <img src="https://i.postimg.cc/3RLBW1qn/3.png" alt="ห้องพักแบบพิเศษ">
-                    </div>
+                    <div class="room-card-image"><img src="https://i.imgur.com/y1v2l9S.jpg" alt="ห้องพักแบบพิเศษ"></div>
                     <div class="room-card-content">
                         <h3>ห้องพิเศษ</h3>
                         <p>พื้นที่กว้างขวางขึ้น พร้อมเตียงไฟฟ้าและอุปกรณ์เสริมพิเศษสำหรับการดูแลที่ต้องการความใส่ใจมากเป็นพิเศษ</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+
     <section id="gallery" class="section">
         <div class="container">
             <h2 class="section-title">แกลอรี่ภาพบรรยากาศ</h2>
-            <p style="text-align: center; margin-top: -30px; margin-bottom: 40px;">ภาพความสุขและความทรงจำดีๆ ภายในศูนย์ของเรา</p>
-            
             <div class="gallery-grid">
-                <a href="https://i.postimg.cc/k5g3PNxs/1.png" class="gallery-item" title="ห้องพักที่สะดวกสบาย">
-                    <img src="https://i.postimg.cc/k5g3PNxs/1.png" alt="ห้องพัก">
-                </a>
-                <a href="https://i.postimg.cc/P5hn2nJB/3.png" class="gallery-item" title="กิจกรรมยามว่าง">
-                    <img src="https://i.postimg.cc/P5hn2nJB/3.png" alt="กิจกรรม">
-                </a>
-                <a href="https://i.postimg.cc/8zHQYXrs/4.png" class="gallery-item" title="พื้นที่ส่วนกลางสำหรับพักผ่อน">
-                    <img src="https://i.postimg.cc/8zHQYXrs/4.png" alt="พื้นที่ส่วนกลาง">
-                </a>
-                <a href="https://i.postimg.cc/ThMC2xBG/947128-0.jpg" class="gallery-item" title="ทีมงานผู้ดูแลมืออาชีพ">
-                    <img src="https://i.postimg.cc/ThMC2xBG/947128-0.jpg" alt="ทีมงาน">
-                </a>
-                <a href="https://i.postimg.cc/VLxJKvPD/Chat-GPT-Image-8-2568-23-37-24.png" class="gallery-item" title="อาหารสะอาด ถูกหลักโภชนาการ">
-                    <img src="https://i.postimg.cc/VLxJKvPD/Chat-GPT-Image-8-2568-23-37-24.png" alt="อาหาร">
-                </a>
-                <a href="https://i.postimg.cc/gcXp0K1B/947129-0.jpg" class="gallery-item" title="กายภาพบำบัดเพื่อฟื้นฟูร่างกาย">
-                    <img src="https://i.postimg.cc/gcXp0K1B/947129-0.jpg" alt="กายภาพบำบัด">
-                </a>
+                <a href="https://images.unsplash.com/photo-1576765608866-5b5183aaf419?q=80&w=1470" class="gallery-item" title="ห้องพักที่สะดวกสบาย"><img src="https://images.unsplash.com/photo-1576765608866-5b5183aaf419?q=80&w=1470" alt="ห้องพัก"></a>
+                <a href="https://images.unsplash.com/photo-1612282219904-8a15a8c14454?q=80&w=1470" class="gallery-item" title="กิจกรรมยามว่าง"><img src="https://images.unsplash.com/photo-1612282219904-8a15a8c14454?q=80&w=1470" alt="กิจกรรม"></a>
+                <a href="https://images.unsplash.com/photo-1599045118108-bf214d5a2f58?q=80&w=1470" class="gallery-item" title="พื้นที่ส่วนกลางสำหรับพักผ่อน"><img src="https://images.unsplash.com/photo-1599045118108-bf214d5a2f58?q=80&w=1470" alt="พื้นที่ส่วนกลาง"></a>
+                <a href="https://images.unsplash.com/photo-1593122112435-0d418731b8a3?q=80&w=1470" class="gallery-item" title="ทีมงานผู้ดูแลมืออาชีพ"><img src="https://images.unsplash.com/photo-1593122112435-0d418731b8a3?q=80&w=1470" alt="ทีมงาน"></a>
+                <a href="https://images.unsplash.com/photo-1608791338118-2cf433a3e2f5?q=80&w=1470" class="gallery-item" title="อาหารสะอาด ถูกหลักโภชนาการ"><img src="https://images.unsplash.com/photo-1608791338118-2cf433a3e2f5?q=80&w=1470" alt="อาหาร"></a>
+                <a href="https://images.unsplash.com/photo-1615489438332-f6815138122a?q=80&w=1470" class="gallery-item" title="กายภาพบำบัดเพื่อฟื้นฟูร่างกาย"><img src="https://images.unsplash.com/photo-1615489438332-f6815138122a?q=80&w=1470" alt="กายภาพบำบัด"></a>
             </div>
         </div>
     </section>
@@ -167,24 +163,15 @@
                 <h3>ส่งข้อความถึงเรา</h3>
                 <form name="contact" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact">
-                    <div class="form-group">
-                        <label for="name">ชื่อ-นามสกุล</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">เบอร์โทรศัพท์</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">ข้อความ</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
+                    <div class="form-group"><label for="name">ชื่อ-นามสกุล</label><input type="text" id="name" name="name" required></div>
+                    <div class="form-group"><label for="phone">เบอร์โทรศัพท์</label><input type="tel" id="phone" name="phone" required></div>
+                    <div class="form-group"><label for="message">ข้อความ</label><textarea id="message" name="message" rows="5" required></textarea></div>
                     <button type="submit" class="btn">ส่งข้อความ</button>
                 </form>
             </div>
             <div class="contact-details">
                 <h3>ข้อมูลติดต่อ</h3>
-                <p><i class="fas fa-map-marker-alt"></i> [ใส่ที่อยู่ของคุณที่นี่], กรุงเทพมหานคร</p>
+                <p><i class="fas fa-map-marker-alt"></i> [ใส่ที่อยู่ของคุณที่นี่]</p>
                 <p><i class="fas fa-phone"></i> <a href="tel:08xxxxxxxx">08X-XXX-XXXX</a></p>
                 <p><i class="fab fa-line"></i> <a href="https://line.me/ti/p/~yourlineid" target="_blank">@yourlineid</a></p>
                 <p><i class="fas fa-clock"></i> เปิดให้บริการทุกวัน 9:00 - 18:00 น.</p>
@@ -193,67 +180,26 @@
     </section>
 
     <section id="map">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124009.1199320875!2d100.4414406214152!3d13.75044469796035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2993f77a8989f%3A0x52365ada28551156!2sBangkok!5e0!3m2!1sen!2sth!4v1726027000000!5m2!1sen!2sth" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124009.1199320875!2d100.4414406214152!3d13.75044469796035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2993f77a8989f%3A0x52365ada28551156!2sBangkok!5e0!3m2!1sen!2sth!4v1726027000000!5m2!1sen!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 [ชื่อศูนย์ดูแลผู้สูงอายุของคุณ]. All Rights Reserved.</p>
-        </div>
+        <div class="container"><p>© 2025 [ชื่อศูนย์ดูแลผู้สูงอายุของคุณ]. All Rights Reserved.</p></div>
     </footer>
 
     <div class="floating-buttons">
-        <a href="tel:08xxxxxxxx" class="fab-item" aria-label="โทร">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="https://line.me/ti/p/~yourlineid" target="_blank" class="fab-item" aria-label="LINE">
-            <i class="fab fa-line"></i>
-        </a>
-        <a href="https://www.facebook.com/your-page" target="_blank" class="fab-item" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <button id="scroll-to-top" class="fab-item" aria-label="เลื่อนขึ้นบนสุด">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+        <a href="tel:08xxxxxxxx" class="fab-item" aria-label="โทร"><i class="fas fa-phone"></i></a>
+        <a href="https://line.me/ti/p/~yourlineid" target="_blank" class="fab-item" aria-label="LINE"><i class="fab fa-line"></i></a>
+        <a href="https://www.facebook.com/your-page" target="_blank" class="fab-item" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <button id="scroll-to-top" class="fab-item" aria-label="เลื่อนขึ้นบนสุด"><i class="fas fa-arrow-up"></i></button>
     </div>
 
     <script src="script.js"></script>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
-<script>
-    // เรียกใช้งาน Lightbox สำหรับแกลอรี่ในหน้าแรก
-    new SimpleLightbox('.gallery-grid a', {
-        captionDelay: 250,
-    });
-</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+    <script>
+        new SimpleLightbox('.gallery-grid a', { captionDelay: 250 });
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
