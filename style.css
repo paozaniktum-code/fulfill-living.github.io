@@ -165,11 +165,11 @@ header .container {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 112px; /* Adjust based on header height */
+    top: 103px; /* Adjust based on header height */
     right: 0;
     width: 100%;
     max-width: 300px;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 103px);
     background-color: var(--white);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     transform: translateX(100%);
