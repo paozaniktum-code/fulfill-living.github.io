@@ -121,7 +121,7 @@ header .container {
     align-items: center;
 }
 .logo img {
-    height: 40px;
+    height: 70px;
     display: block;
 }
 .main-nav ul {
@@ -153,11 +153,11 @@ header .container {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 103px;
+    top: 113px;
     right: 0;
     width: 100%;
     max-width: 300px;
-    height: calc(100vh - 103px);
+    height: calc(100vh - 113px);
     background-color: var(--white);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     transform: translateX(100%);
