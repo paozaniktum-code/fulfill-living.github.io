@@ -195,13 +195,14 @@ header .container {
 
 /* --- Hero Section --- */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/LX9W9Xq4/FULFILL-LIVING22.png') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
+    padding: 0; /* ลบระยะห่างภายในทั้งหมด */
+    line-height: 0; /* ป้องกันการเกิดขอบขาวใต้ภาพ */
+}
+
+#hero img {
+    width: 100%;
+    height: auto; /* ทำให้สัดส่วนภาพถูกต้องเสมอ */
+    display: block;
 }
 
 .hero-content h1 {
