@@ -1,11 +1,14 @@
-/* ======== General Styling ======== */
+/* --- Global Styles & Variables --- */
 :root {
-    --primary-yellow: #B0E0E6; /* เปลี่ยนเป็น สีฟ้าอ่อน (Powder Blue) */
-    --secondary-orange: #98FB98; /* เปลี่ยนเป็น สีเขียวอ่อน (Pale Green) */
-    --text-dark: #333333;
-    --text-light: #555555;
-    --font-heading: 'Kanit', sans-serif;
-    --font-body: 'Kanit', sans-serif;
+    --mint: #86efac;
+    --sky: #38bdf8;
+    --dark-blue: #0c4a6e; /* For text */
+    --light-bg: #f0f9ff;
+    --white: #ffffff;
+    --gray: #f3f4f6;
+    --text-color: #333;
+    --primary-font: 'Kanit', sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -19,375 +22,377 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: #FFFFFF;
+    font-family: var(--primary-font);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    color: var(--text-dark);
+.section {
+    padding: 60px 0;
 }
 
-/* ======== Navbar ======== */
-.navbar {
-    background-color: #fff;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sky), var(--mint));
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--sky);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--sky), var(--mint));
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(56, 189, 248, 0.3);
+}
+
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-bar a {
+    color: var(--white);
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+    color: var(--mint);
+}
+
+.top-bar i {
+    margin-right: 8px;
+    color: var(--mint);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 15px 0;
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar .container {
+header .container {
     display: flex;
-    justify-content: flex-end; /* จัดเมนูไปทางขวา */
+    justify-content: space-between;
     align-items: center;
-    position: relative; /* สำหรับโลโก้ด้านซ้าย */
 }
 
-.logo-top-left {
-    position: absolute;
-    left: 20px; /* ชิดซ้ายของ container */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001; /* ให้อยู่ด้านบนเมนู */
+.logo img {
+    height: 40px;
+    display: block;
 }
 
-.logo-top-left img {
-    height: 60px; /* ขนาดโลโก้ */
-    width: auto;
-}
-
-.navbar .nav-menu {
+.main-nav ul {
     list-style: none;
     display: flex;
 }
 
-.navbar .nav-menu li {
+.main-nav li {
     margin-left: 30px;
 }
 
-.navbar .nav-menu a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 1.05rem;
-    transition: color 0.3s;
+.main-nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.navbar .nav-menu a:hover {
-    color: var(--secondary-orange);
+.main-nav a:hover {
+    color: var(--sky);
 }
 
-/* ======== Hero Section (Propoliz Style) ======== */
-.hero-propoliz {
-    background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 35%, var(--primary-yellow) 35%, var(--primary-yellow) 100%);
-    min-height: 90vh; /* กำหนดความสูง */
-    display: flex;
-    align-items: center;
-    padding: 100px 0 50px 0; /* เว้นระยะด้านบนสำหรับ Navbar */
-    overflow: hidden; /* ซ่อนส่วนที่เกินออกไป */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-blue);
 }
 
-.hero-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 0 20px;
-}
-
-.hero-left {
-    flex: 1;
+/* --- Mobile Menu --- */
+.mobile-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; /* จัดให้นางแบบอยู่ด้านล่างของพื้นที่ */
-    padding-bottom: 20px; /* ดันนางแบบขึ้นเล็กน้อย */
-}
-
-.propoliz-logo-main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px; /* ขนาดโลโก้ Propoliz ใน Hero */
-    height: auto;
-    transform: translateX(50px) translateY(-50px); /* ขยับโลโก้ให้ออกมานอกกรอบเล็กน้อย */
-}
-
-.propoliz-logo-main img {
+    position: fixed;
+    top: 112px; /* Adjust based on header height */
+    right: 0;
     width: 100%;
-    height: auto;
+    max-width: 300px;
+    height: calc(100vh - 112px);
+    background-color: var(--white);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
 }
 
-.product-woman-img {
-    max-width: 450px; /* ขนาดรูปนางแบบ */
-    height: auto;
-    position: relative;
-    bottom: -100px; /* เลื่อนรูปนางแบบลงมาด้านล่างของ section */
-    left: -50px;
+.mobile-menu.active {
+    transform: translateX(0);
 }
 
-.hero-right {
-    flex: 1;
+.mobile-menu a {
+    padding: 20px;
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--gray);
+    transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--light-bg);
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1612282219904-8a15a8c14454?q=80&w=1470') no-repeat center center/cover;
+    height: 60vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start; /* จัดเนื้อหาชิดซ้าย */
-    padding-left: 50px;
-    position: relative;
-    color: var(--text-dark);
+    text-align: center;
+    color: var(--white);
 }
 
-.hero-right h2 {
+.hero-content h1 {
     font-size: 3.5rem;
-    line-height: 1.1;
-    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- Services Section --- */
+#services {
+    background-color: var(--light-bg);
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.service-item {
+    background-color: var(--white);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.service-item i {
+    font-size: 3rem;
+    color: var(--sky);
     margin-bottom: 20px;
 }
-
-.propoliz-text-img {
-    height: 70px; /* ขนาดรูป Propoliz Text */
-    vertical-align: middle;
-    margin-left: 10px;
+.service-item h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
 }
 
-.plus-extherb {
-    font-size: 1.2rem;
-    font-weight: 300;
-    display: block; /* แยกบรรทัด */
-    margin-top: -10px;
-    margin-left: 170px; /* เยื้องให้ตรงกับ Propoliz */
-}
-
-.slogan {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: var(--text-dark);
-    max-width: 500px;
-}
-
-.product-display {
+/* --- About Section --- */
+.about-container {
     display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    position: relative;
-    right: -100px; /* เลื่อนกลุ่มสินค้าไปทางขวาให้พ้นขอบ */
-    top: 20px; /* เลื่อนลงมาเล็กน้อย */
+    align-items: center;
+    gap: 40px;
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.about-content {
+    flex: 1;
+}
+.about-content h2 {
+    text-align: left;
+}
+.about-content h2::after {
+    left: 0;
+    transform: translateX(0);
+}
+.about-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+.about-content li {
+    margin-bottom: 10px;
+}
+.about-content i {
+    color: var(--mint);
+    margin-right: 10px;
 }
 
-.product-box {
-    max-width: 150px;
-    height: auto;
+/* --- Contact Section --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sky);
+}
+.contact-details {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+}
+.contact-details h3 {
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+.contact-details p {
+    margin-bottom: 15px;
+}
+.contact-details i {
+    color: var(--sky);
+    margin-right: 10px;
+    width: 20px;
 }
 
-.product-spray {
-    max-width: 80px;
-    height: auto;
+/* --- Map Section --- */
+#map iframe {
+    display: block;
 }
 
-/* ======== Content Sections (Generic) ======== */
-.content-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.bg-light {
-    background-color: #F7F5F2;
-}
-
-/* ======== Footer ======== */
+/* --- Footer --- */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-blue);
+    color: var(--white);
     text-align: center;
     padding: 20px 0;
 }
 
-/* ======== Floating Buttons (ดีไซน์ สี่เหลี่ยมมุมโค้ง) ======== */
-.fab-menu-container {
+/* --- Floating Action Buttons --- */
+.floating-buttons {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1010;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
+    gap: 10px;
 }
-
-.fab-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
-    background-color: var(--primary-yellow); /* ใช้สีเหลืองหลักของ Propoliz */
-    color: white;
+.fab-item {
+    width: 55px;
+    height: 55px;
+    background-color: var(--sky);
+    color: var(--white);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: none;
     cursor: pointer;
 }
+.fab-item:nth-child(2) { background-color: #06C755; } /* LINE */
+.fab-item:nth-child(3) { background-color: #1877F2; } /* Facebook */
+.fab-item:nth-child(4) { background-color: var(--dark-blue); display: none; } /* Scroll to Top */
 
-.fab-button:hover {
+.fab-item:hover {
     transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-.fab-button i {
-    font-size: 28px;
-    pointer-events: none;
-}
-
-#back-to-top-btn {
-    background-color: #555;
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-#back-to-top-btn.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-/* --- กำหนดสีให้แต่ละปุ่มโซเชียล --- */
-.bg-phone { background-color: #27ae60; }
-.bg-line { background-color: #00B900; }
-.bg-facebook { background-color: #1877F2; }
-.bg-tiktok { background-color: #000000; }
-.bg-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-
-/* ======== Responsive Design for Mobile ======== */
-@media (max-width: 992px) { /* ปรับ breakpoint สำหรับ tablet/mobile */
-    .navbar .container {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-end; /* จัดเมนูชิดขวาบนมือถือ */
-    }
-
-    .logo-top-left {
-        position: static; /* ลบตำแหน่ง fixed */
-        transform: none;
-        margin-right: auto; /* ดันโลโก้ไปทางซ้ายสุด */
-        margin-left: 20px; /* เว้นระยะห่างจากขอบ */
-    }
-
-    .navbar .nav-menu {
-        flex-direction: column;
-        align-items: flex-end; /* จัดเมนูชิดขวา */
-        gap: 10px;
-        width: 100%; /* ให้เมนูกินพื้นที่เต็มความกว้าง */
-        padding-right: 20px; /* เว้นระยะห่างจากขอบ */
-    }
-
-    .navbar .nav-menu li {
-        margin-left: 0;
-    }
-
-    /* Hero Section Responsive */
-    .hero-propoliz {
-        background: var(--primary-yellow); /* บนมือถือให้เป็นสีเหลืองเต็มพื้นที่ */
-        min-height: auto;
-        padding-top: 100px; /* เว้นระยะสำหรับ Navbar */
-    }
-
-    .hero-content {
-        flex-direction: column; /* เปลี่ยนการจัดวางเป็นแนวตั้ง */
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .hero-left {
-        padding-bottom: 0;
-    }
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .section-title { font-size: 2rem; }
+    .hero-content h1 { font-size: 2.5rem; }
     
-    .propoliz-logo-main {
-        position: static; /* ลบตำแหน่ง fixed */
-        transform: none;
-        margin-bottom: 20px;
-    }
+    .main-nav { display: none; }
+    .hamburger { display: block; }
+    .top-bar .container { justify-content: center; }
 
-    .product-woman-img {
-        max-width: 300px; /* ลดขนาดรูปนางแบบ */
-        position: static;
-        left: auto;
-        bottom: auto;
-        margin-bottom: 30px;
-    }
+    .about-container { flex-direction: column; }
+    .contact-grid { grid-template-columns: 1fr; }
 
-    .hero-right {
-        padding-left: 0;
-        align-items: center; /* จัดเนื้อหาตรงกลาง */
-    }
-
-    .hero-right h2 {
-        font-size: 2.5rem; /* ลดขนาดฟอนต์ */
-    }
-    
-    .propoliz-text-img {
-        height: 50px;
-        margin-left: 0; /* ไม่ต้องเยื้อง */
-        display: block; /* ขึ้นบรรทัดใหม่ */
-        margin: 10px auto; /* จัดกลาง */
-    }
-
-    .plus-extherb {
-        font-size: 1rem;
-        margin-left: 0; /* ไม่ต้องเยื้อง */
-        margin-top: 0;
-    }
-
-    .slogan {
-        font-size: 1rem;
-        max-width: 90%;
-    }
-
-    .product-display {
-        flex-direction: row; /* กลับมาเป็นแนวนอนสำหรับสินค้า */
-        justify-content: center;
-        right: auto;
-        top: auto;
-        margin-top: 20px;
-    }
-
-    .product-box, .product-spray {
-        max-width: 100px; /* ลดขนาดสินค้า */
-    }
-
-    .fab-menu-container {
-        bottom: 15px;
-        right: 15px;
-        gap: 10px;
-    }
-
-    .fab-button {
-        width: 50px;
-        height: 50px;
-    }
-
-    .fab-button i {
-        font-size: 24px;
+    .mobile-menu {
+        top: 103px;
+        height: calc(100vh - 103px);
     }
 }
