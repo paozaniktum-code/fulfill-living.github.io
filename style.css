@@ -273,37 +273,6 @@ header .container {
     color: #333;
 }
 
-/* --- Services Section --- */
-#services {
-    background-color: var(--light-bg);
-}
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-.service-item {
-    background-color: var(--white);
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.service-item i {
-    font-size: 3rem;
-    color: var(--sky);
-    margin-bottom: 20px;
-}
-.service-item h3 {
-    font-size: 1.5rem;
-    color: var(--dark-blue);
-    margin-bottom: 10px;
-}
 
 /* --- Room Types Section --- */
 #rooms {
@@ -553,7 +522,7 @@ footer {
 }
 
 /* --- Services Page Styles --- */
-.services-page-section {
+#services {
     padding: 60px 0;
     background-color: var(--light-bg);
 }
