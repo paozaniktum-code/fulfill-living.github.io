@@ -396,3 +396,81 @@ footer {
         height: calc(100vh - 103px);
     }
 }
+
+/* --- Services Page Styles --- */
+.services-page-section {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+.services-page-grid {
+    display: grid;
+    /* สำหรับจอใหญ่ ให้แสดง 4 คอลัมน์ */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden; /* ทำให้มุมรูปภาพโค้งตาม card */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* ทำให้รูปภาพเต็มพื้นที่โดยไม่ผิดสัดส่วน */
+}
+
+.service-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* ทำให้ content ขยายเต็มพื้นที่ที่เหลือ */
+}
+
+.service-card-content h3 {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.service-card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1; /* ดันให้ปุ่มอยู่ด้านล่างสุดเสมอ */
+    margin-bottom: 20px;
+}
+
+.service-card-content .btn {
+    align-self: flex-start; /* จัดปุ่มให้อยู่ชิดซ้าย */
+    background: var(--dark-blue); /* เปลี่ยนสีปุ่มให้เด่นขึ้น */
+}
+.service-card-content .btn:hover {
+     background: var(--sky);
+}
+
+
+/* --- Responsive for Services Page --- */
+@media (max-width: 1024px) {
+    /* สำหรับแท็บเล็ต ให้แสดง 2 คอลัมน์ */
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* สำหรับมือถือ ให้แสดง 1 คอลัมน์ */
+    .services-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
