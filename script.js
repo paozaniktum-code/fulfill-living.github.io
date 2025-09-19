@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scroll-to-top');
 
     window.addEventListener('scroll', () => {
-        // Show button if user scrolls down more than 300px
         if (window.scrollY > 300) {
             scrollToTopBtn.style.display = 'flex';
         } else {
