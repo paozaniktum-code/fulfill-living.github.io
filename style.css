@@ -254,7 +254,7 @@ header .container {
 }
 .promo-highlight {
     color: #ef4444; /* สีส้มแดง */
-    font-size: 2.2rem;  /* <-- เพิ่มขนาดตัวอักษร */
+    font-size: 4.2rem;  /* <-- เพิ่มขนาดตัวอักษร */
     font-weight: 600; /* <-- เพิ่มความหนา */
 }
 .intro-highlight-box {
