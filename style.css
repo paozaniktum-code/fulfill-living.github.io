@@ -195,14 +195,18 @@ header .container {
 
 /* --- Hero Section --- */
 #hero {
-    padding: 0; /* ลบระยะห่างภายในทั้งหมด */
-    line-height: 0; /* ป้องกันการเกิดขอบขาวใต้ภาพ */
+    padding: 40px 0; /* เพิ่มระยะห่างบน-ล่าง */
+    background-color: var(--light-bg); /* ใส่สีพื้นหลังให้เข้ากับส่วนอื่นๆ */
 }
-
+#hero .container {
+    line-height: 0; /* ป้องกันการเกิดขอบขาวใต้ภาพ */
+    
 #hero img {
-    width: 100%;
-    height: auto; /* ทำให้สัดส่วนภาพถูกต้องเสมอ */
+   width: 100%;
+    height: auto;
     display: block;
+    border-radius: 15px; /* ทำให้มุมภาพมน */
+    box-shadow: var(--shadow); /* เพิ่มเงาให้ดูมีมิติ */
 }
 
 .hero-content h1 {
