@@ -475,8 +475,9 @@ footer {
     }
 }
 /* --- Gallery Page Styles --- */
-.gallery-page-section {
+#gallery { /* เปลี่ยนจาก class เป็น id เพื่อให้เข้ากับโค้ดใหม่ */
     padding: 60px 0;
+    background-color: var(--light-bg); /* เพิ่มพื้นหลังสีฟ้าอ่อน */
 }
 
 .gallery-grid {
