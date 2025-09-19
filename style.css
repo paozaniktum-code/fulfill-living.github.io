@@ -474,3 +474,60 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* --- Gallery Page Styles --- */
+.gallery-page-section {
+    padding: 60px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Responsive Grid: จะปรับจำนวนคอลัมน์อัตโนมัติตามขนาดจอ */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative; /* สำหรับสร้างเอฟเฟกต์ hover */
+    aspect-ratio: 4 / 3; /* ทำให้รูปภาพมีสัดส่วนเท่ากัน */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* เอฟเฟกต์ Zoom เมื่อนำเมาส์ไปวาง */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* เพิ่ม Overlay และ ไอคอนแว่นขยาย */
+.gallery-item::after {
+    content: '\f00e'; /* ไอคอนแว่นขยายจาก Font Awesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 189, 248, 0.6); /* สีฟ้า Sky แบบโปร่งแสง */
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
