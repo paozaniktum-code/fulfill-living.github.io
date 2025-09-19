@@ -397,53 +397,104 @@ header .container {
 }
 
 /* --- Contact Section --- */
+#contact {
+    background-color: var(--white);
+}
+
 .contact-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 2fr 1fr; /* แบ่งสัดส่วน 2:1 */
+    gap: 50px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
+    align-items: flex-start;
 }
-.contact-form form {
-    display: flex;
-    flex-direction: column;
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
 }
+
+.contact-form p {
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* เพิ่มระยะห่าง label */
     font-weight: 500;
+    color: var(--dark-blue);
 }
+
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px; /* เพิ่ม padding ให้น่าใช้งาน */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* เพิ่มความโค้งมน */
     font-family: var(--primary-font);
     font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--sky);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); /* เพิ่มเงาเมื่อ focus */
 }
+
 .contact-details {
     background-color: var(--light-bg);
     padding: 30px;
     border-radius: 10px;
+    border: 1px solid #e0f2f1;
 }
+
 .contact-details h3 {
+    font-size: 1.8rem;
     color: var(--dark-blue);
     margin-bottom: 20px;
 }
+
 .contact-details p {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* เพิ่มระยะห่างแต่ละบรรทัด */
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
-.contact-details i {
+
+.contact-details p i {
     color: var(--sky);
-    margin-right: 10px;
+    margin-right: 15px;
     width: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-details a {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: var(--sky);
+}
+
+/* --- ปรับแก้ Responsive สำหรับส่วน Contact --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* ทำให้เหลือ 1 คอลัมน์บนจอแท็บเล็ตและมือถือ */
+    }
 }
 
 /* --- Map & Footer --- */
