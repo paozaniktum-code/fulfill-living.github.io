@@ -82,7 +82,6 @@ a {
     box-shadow: 0 6px 12px rgba(56, 189, 248, 0.3);
 }
 
-
 /* --- Top Bar --- */
 .top-bar {
     background-color: var(--dark-blue);
@@ -90,22 +89,18 @@ a {
     padding: 8px 0;
     font-size: 0.9rem;
 }
-
 .top-bar .container {
     display: flex;
     justify-content: flex-end;
 }
-
 .top-bar a {
     color: var(--white);
     margin-left: 20px;
     transition: color 0.3s ease;
 }
-
 .top-bar a:hover {
     color: var(--mint);
 }
-
 .top-bar i {
     margin-right: 8px;
     color: var(--mint);
@@ -120,37 +115,30 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .logo img {
     height: 40px;
     display: block;
 }
-
 .main-nav ul {
     list-style: none;
     display: flex;
 }
-
 .main-nav li {
     margin-left: 30px;
 }
-
 .main-nav a {
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
-
 .main-nav a:hover {
     color: var(--sky);
 }
-
 .hamburger {
     display: none;
     font-size: 1.5rem;
@@ -165,22 +153,20 @@ header .container {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 112px; /* Adjust based on header height */
+    top: 103px;
     right: 0;
     width: 100%;
     max-width: 300px;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 103px);
     background-color: var(--white);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 999;
 }
-
 .mobile-menu.active {
     transform: translateX(0);
 }
-
 .mobile-menu a {
     padding: 20px;
     color: var(--dark-blue);
@@ -188,31 +174,103 @@ header .container {
     border-bottom: 1px solid var(--gray);
     transition: background-color 0.3s;
 }
-
 .mobile-menu a:hover {
     background-color: var(--light-bg);
 }
 
 /* --- Hero Section --- */
 #hero {
-    padding: 0; /* ลบระยะห่างภายในทั้งหมด */
+    padding: 40px 0; /* เพิ่มระยะห่างบน-ล่าง */
+    background-color: var(--light-bg); /* ใส่สีพื้นหลังให้เข้ากับส่วนอื่นๆ */
+}
+#hero .container {
     line-height: 0; /* ป้องกันการเกิดขอบขาวใต้ภาพ */
 }
-
 #hero img {
     width: 100%;
-    height: auto; /* ทำให้สัดส่วนภาพถูกต้องเสมอ */
+    height: auto;
     display: block;
+    border-radius: 15px; /* ทำให้มุมภาพมน */
+    box-shadow: var(--shadow); /* เพิ่มเงาให้ดูมีมิติ */
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
+/* --- Introduction Section --- */
+#introduction {
+    background-color: var(--white);
+}
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro-title {
+    font-size: 2.2rem;
+    color: #0d5e68;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.intro-address {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+.intro-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.intro-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+.btn-intro {
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-intro:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+.btn-call { background-color: #f97316; }
+.btn-line { background-color: #14b8a6; }
+.btn-facebook { background-color: #3b82f6; }
+.intro-promotion h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 40px 0 20px 0;
+}
+.promo-highlight {
+    color: #ef4444;
+}
+.intro-highlight-box {
+    background-color: #e0f2f1;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+    border-left: 5px solid #14b8a6;
+}
+.intro-highlight-box h3 {
+    font-size: 1.5rem;
+    color: #0d5e68;
     margin-bottom: 10px;
 }
-
-.hero-content p {
+.intro-highlight-box p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    line-height: 1.7;
+    color: #333;
 }
 
 /* --- Services Section --- */
@@ -247,40 +305,95 @@ header .container {
     margin-bottom: 10px;
 }
 
-/* --- About Section --- */
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+/* --- Room Types Section --- */
+#rooms {
+    background-color: var(--white);
 }
-.about-image {
-    flex: 1;
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
-.about-image img {
+.room-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: var(--light-bg);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.room-card-image img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.room-card-content {
+    padding: 25px 20px;
+}
+.room-card-content h3 {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin: 0 0 10px 0;
+}
+.room-card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Gallery Section --- */
+#gallery {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.gallery-item {
+    display: block;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    position: relative;
+    aspect-ratio: 4 / 3;
 }
-.about-content {
-    flex: 1;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
-.about-content h2 {
-    text-align: left;
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
-.about-content h2::after {
+.gallery-item::after {
+    content: '\f00e';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
     left: 0;
-    transform: translateX(0);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 189, 248, 0.6);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
-.about-content ul {
-    list-style: none;
-    margin-top: 20px;
-}
-.about-content li {
-    margin-bottom: 10px;
-}
-.about-content i {
-    color: var(--mint);
-    margin-right: 10px;
+.gallery-item:hover::after {
+    opacity: 1;
 }
 
 /* --- Contact Section --- */
@@ -333,12 +446,8 @@ header .container {
     width: 20px;
 }
 
-/* --- Map Section --- */
-#map iframe {
-    display: block;
-}
-
-/* --- Footer --- */
+/* --- Map & Footer --- */
+#map iframe { display: block; }
 footer {
     background-color: var(--dark-blue);
     color: var(--white);
@@ -371,31 +480,12 @@ footer {
     border: none;
     cursor: pointer;
 }
-.fab-item:nth-child(2) { background-color: #06C755; } /* LINE */
-.fab-item:nth-child(3) { background-color: #1877F2; } /* Facebook */
-.fab-item:nth-child(4) { background-color: var(--dark-blue); display: none; } /* Scroll to Top */
-
+.fab-item:nth-child(2) { background-color: #06C755; }
+.fab-item:nth-child(3) { background-color: #1877F2; }
+.fab-item:nth-child(4) { background-color: var(--dark-blue); display: none; }
 .fab-item:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
-    .section-title { font-size: 2rem; }
-    .hero-content h1 { font-size: 2.5rem; }
-    
-    .main-nav { display: none; }
-    .hamburger { display: block; }
-    .top-bar .container { justify-content: center; }
-
-    .about-container { flex-direction: column; }
-    .contact-grid { grid-template-columns: 1fr; }
-
-    .mobile-menu {
-        top: 103px;
-        height: calc(100vh - 103px);
-    }
 }
 
 /* --- Services Page Styles --- */
@@ -403,274 +493,68 @@ footer {
     padding: 60px 0;
     background-color: var(--light-bg);
 }
-
 .services-page-grid {
     display: grid;
-    /* สำหรับจอใหญ่ ให้แสดง 4 คอลัมน์ */
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
-
 .service-card {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: var(--shadow);
-    overflow: hidden; /* ทำให้มุมรูปภาพโค้งตาม card */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
-
 .service-card img {
     width: 100%;
     height: 220px;
-    object-fit: cover; /* ทำให้รูปภาพเต็มพื้นที่โดยไม่ผิดสัดส่วน */
+    object-fit: cover;
 }
-
 .service-card-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* ทำให้ content ขยายเต็มพื้นที่ที่เหลือ */
+    flex-grow: 1;
 }
-
 .service-card-content h3 {
     font-size: 1.1rem;
     color: var(--dark-blue);
     margin-bottom: 10px;
 }
-
 .service-card-content p {
     font-size: 0.95rem;
     color: #555;
-    flex-grow: 1; /* ดันให้ปุ่มอยู่ด้านล่างสุดเสมอ */
+    flex-grow: 1;
     margin-bottom: 20px;
 }
-
 .service-card-content .btn {
-    align-self: flex-start; /* จัดปุ่มให้อยู่ชิดซ้าย */
-    background: var(--dark-blue); /* เปลี่ยนสีปุ่มให้เด่นขึ้น */
+    align-self: flex-start;
+    background: var(--dark-blue);
 }
 .service-card-content .btn:hover {
      background: var(--sky);
 }
 
 
-/* --- Responsive for Services Page --- */
+/* --- Responsive Design --- */
 @media (max-width: 1024px) {
-    /* สำหรับแท็บเล็ต ให้แสดง 2 คอลัมน์ */
-    .services-page-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .contact-grid { grid-template-columns: 1fr; }
+    .room-grid { grid-template-columns: 1fr; }
+    .services-page-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    /* สำหรับมือถือ ให้แสดง 1 คอลัมน์ */
-    .services-page-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* --- Gallery Page Styles --- */
-#gallery { /* เปลี่ยนจาก class เป็น id เพื่อให้เข้ากับโค้ดใหม่ */
-    padding: 60px 0;
-    background-color: var(--light-bg); /* เพิ่มพื้นหลังสีฟ้าอ่อน */
-}
-
-.gallery-grid {
-    display: grid;
-    /* Responsive Grid: จะปรับจำนวนคอลัมน์อัตโนมัติตามขนาดจอ */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    display: block;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    position: relative; /* สำหรับสร้างเอฟเฟกต์ hover */
-    aspect-ratio: 4 / 3; /* ทำให้รูปภาพมีสัดส่วนเท่ากัน */
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-/* เอฟเฟกต์ Zoom เมื่อนำเมาส์ไปวาง */
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/* เพิ่ม Overlay และ ไอคอนแว่นขยาย */
-.gallery-item::after {
-    content: '\f00e'; /* ไอคอนแว่นขยายจาก Font Awesome */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(56, 189, 248, 0.6); /* สีฟ้า Sky แบบโปร่งแสง */
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-/* --- Room Section Styles --- */
-#rooms {
-    background-color: var(--white);
-}
-
-.room-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.room-card {
-    background: var(--light-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.room-card-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.room-card-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* สำคัญ: ทำให้ content ขยายเต็มพื้นที่ */
-}
-
-.room-card-content h3 {
-    font-size: 1.8rem;
-    color: var(--dark-blue);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.room-card-content ul {
-    list-style: none;
-    margin-bottom: 25px;
-    flex-grow: 1; /* สำคัญ: ดันให้ปุ่มอยู่ด้านล่างสุด */
-}
-
-.room-card-content li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.room-card-content li i {
-    color: var(--mint);
-    margin-right: 12px;
-    margin-top: 4px; /* จัดตำแหน่งไอคอนให้สวยงาม */
-}
-
-.room-card-content .btn {
-    align-self: center;
-    width: 80%;
-    text-align: center;
-}
-
-/* --- Responsive for Room Section --- */
-@media (max-width: 1024px) {
-    .room-grid {
-        /* แท็บเล็ต: แสดง 2 คอลัมน์ */
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .room-grid {
-        /* มือถือ: แสดง 1 คอลัมน์ */
-        grid-template-columns: 1fr;
-    }
-}
-/* --- Room Types Section --- */
-#rooms {
-    background-color: var(--white); /* หรือ var(--light-bg) ถ้าต้องการพื้นหลังสีฟ้าอ่อน */
-}
-
-.room-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.room-card {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    background-color: var(--light-bg);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
-.room-card-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.room-card-content {
-    padding: 25px 20px;
-}
-
-.room-card-content h3 {
-    font-size: 1.8rem;
-    color: var(--dark-blue);
-    margin: 0 0 10px 0;
-}
-
-.room-card-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-
-/* --- Responsive for Room Section --- */
-@media (max-width: 1024px) {
-    .room-grid {
-        /* สำหรับแท็บเล็ตและมือถือ ให้แสดง 1 คอลัมน์ */
-        grid-template-columns: 1fr;
-    }
+    .section-title { font-size: 2rem; }
+    .main-nav { display: none; }
+    .hamburger { display: block; }
+    .top-bar .container { justify-content: center; }
+    .services-page-grid { grid-template-columns: 1fr; }
+    .intro-title { font-size: 1.8rem; }
+    .intro-promotion h2 { font-size: 1.4rem; }
 }
