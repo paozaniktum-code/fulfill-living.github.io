@@ -592,4 +592,7 @@ footer {
     .services-page-grid { grid-template-columns: 1fr; }
     .intro-title { font-size: 1.8rem; }
     .intro-promotion h2 { font-size: 1.4rem; }
+     .promo-highlight {
+        font-size: 1.7rem; /* ปรับขนาดสำหรับมือถือ */
+         }
 }
