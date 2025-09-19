@@ -195,8 +195,8 @@ header .container {
 
 /* --- Hero Section --- */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1612282219904-8a15a8c14454?q=80&w=1470') no-repeat center center/cover;
-    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/LX9W9Xq4/FULFILL-LIVING22.png') no-repeat center center/cover;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
