@@ -253,7 +253,9 @@ header .container {
     margin: 40px 0 20px 0;
 }
 .promo-highlight {
-    color: #ef4444;
+    color: #ef4444; /* สีส้มแดง */
+    font-size: 2.2rem;  /* <-- เพิ่มขนาดตัวอักษร */
+    font-weight: 600; /* <-- เพิ่มความหนา */
 }
 .intro-highlight-box {
     background-color: #e0f2f1;
