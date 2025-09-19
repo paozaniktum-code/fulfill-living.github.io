@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ศูนย์ดูแลผู้สูงอายุ [ชื่อศูนย์ของคุณ]</title>
-    <meta name="description" content="บริการดูแลผู้สูงอายุครบวงจร ด้วยความใส่ใจและทีมงานมืออาชีพ บรรยากาศอบอุ่นเหมือนบ้าน">
+    <title>บริการทั้งหมด - ศูนย์ดูแลผู้สูงอายุ [ชื่อศูนย์ของคุณ]</title>
+    <meta name="description" content="ดูรายละเอียดบริการดูแลผู้สูงอายุทั้งหมดของเรา ทั้งแบบรายวัน รายเดือน และบริการกายภาพบำบัด">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,15 +27,15 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="https://via.placeholder.com/180x50.png?text=Your+Logo" alt="Logo">
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#hero">หน้าแรก</a></li>
-                    <li><a href="#services">บริการของเรา</a></li>
-                    <li><a href="#about">เกี่ยวกับเรา</a></li>
-                    <li><a href="#contact">ติดต่อเรา</a></li>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="services.html">บริการของเรา</a></li>
+                    <li><a href="index.html#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="index.html#contact">ติดต่อเรา</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger-menu">
@@ -45,106 +45,61 @@
     </header>
     
     <div class="mobile-menu" id="mobile-menu">
-        <a href="#hero">หน้าแรก</a>
-        <a href="#services">บริการของเรา</a>
-        <a href="#about">เกี่ยวกับเรา</a>
-        <a href="#contact">ติดต่อเรา</a>
+        <a href="index.html">หน้าแรก</a>
+        <a href="services.html">บริการของเรา</a>
+        <a href="index.html#about">เกี่ยวกับเรา</a>
+        <a href="index.html#contact">ติดต่อเรา</a>
     </div>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>ดูแลคนที่คุณรัก ด้วยความใส่ใจ</h1>
-            <p>บริการดูแลผู้สูงอายุและผู้ป่วยพักฟื้นครบวงจร โดยทีมงานมืออาชีพ</p>
-            <a href="#contact" class="btn">สอบถามข้อมูลเพิ่มเติม</a>
-        </div>
-    </section>
+    <main class="services-page-section">
+        <div class="container">
+            <h1 class="section-title">บริการทั้งหมดของเรา</h1>
+            <div class="services-page-grid">
 
-    <section id="services" class="container section">
-        <h2 class="section-title">บริการของเรา</h2>
-        <div class="service-grid">
-            <div class="service-item">
-                <i class="fas fa-user-nurse"></i>
-                <h3>ดูแลรายวัน/รายเดือน</h3>
-                <p>บริการดูแลตลอด 24 ชั่วโมง พร้อมกิจกรรมส่งเสริมสุขภาพ กายภาพบำบัด และอาหารตามหลักโภชนาการ</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-clinic-medical"></i>
-                <h3>ดูแลผู้ป่วยพักฟื้น</h3>
-                <p>ดูแลผู้ป่วยหลังผ่าตัด หรือผู้ป่วยในระยะพักฟื้นที่ต้องการการดูแลเป็นพิเศษ</p>
-            </div>
-            <div class="service-item">
-                <i class="fas fa-walking"></i>
-                <h3>กายภาพบำบัด</h3>
-                <p>โปรแกรมกายภาพบำบัดที่ออกแบบเฉพาะบุคคล เพื่อฟื้นฟูสมรรถภาพร่างกาย</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container about-container">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1576765608866-5b5183aaf419?q=80&w=1470" alt="บรรยากาศศูนย์ดูแลผู้สูงอายุ">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">เกี่ยวกับเรา</h2>
-                <p>เราเชื่อว่าผู้สูงอายุทุกท่านสมควรได้รับการดูแลที่ดีที่สุดในสภาพแวดล้อมที่อบอุ่น ปลอดภัย และเหมือนอยู่บ้าน ทีมงานของเราประกอบด้วยพยาบาลและผู้เชี่ยวชาญที่มีประสบการณ์ พร้อมมอบความรักและความเอาใจใส่ให้แก่คนที่คุณรัก</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> ทีมงานมืออาชีพและมีประสบการณ์</li>
-                    <li><i class="fas fa-check-circle"></i> บรรยากาศอบอุ่น เป็นกันเอง</li>
-                    <li><i class="fas fa-check-circle"></i> อาหารสะอาด ปลอดภัย ถูกหลักโภชนาการ</li>
-                    <li><i class="fas fa-check-circle"></i> กิจกรรมสันทนาการเพื่อสุขภาพใจ</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container section">
-        <h2 class="section-title">ติดต่อเรา</h2>
-        <div class="contact-grid">
-            <div class="contact-form">
-                <h3>ส่งข้อความถึงเรา</h3>
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact">
-                    <div class="form-group">
-                        <label for="name">ชื่อ-นามสกุล</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="service-card">
+                    <img src="https://i.imgur.com/vHq4R7m.jpg" alt="บริการดูแลผู้สูงอายุ">
+                    <div class="service-card-content">
+                        <h3>บริการดูแลผู้สูงอายุ คนชรา ต้องการการดูแล</h3>
+                        <p>สำหรับผู้สูงอายุที่ช่วยเหลือตัวเองได้ แต่ต้องการเพื่อนและผู้ดูแลในกิจกรรมประจำวัน</p>
+                        <a href="#" class="btn">ดูรายละเอียด</a>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">เบอร์โทรศัพท์</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">ข้อความ</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">ส่งข้อความ</button>
-                </form>
-            </div>
-            <div class="contact-details">
-                <h3>ข้อมูลติดต่อ</h3>
-                <p><i class="fas fa-map-marker-alt"></i> [ใส่ที่อยู่ของคุณที่นี่], กรุงเทพมหานคร</p>
-                <p><i class="fas fa-phone"></i> <a href="tel:08xxxxxxxx">08X-XXX-XXXX</a></p>
-                <p><i class="fab fa-line"></i> <a href="https://line.me/ti/p/~yourlineid" target="_blank">@yourlineid</a></p>
-                <p><i class="fas fa-clock"></i> เปิดให้บริการทุกวัน 9:00 - 18:00 น.</p>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <section id="map">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124009.1199320875!2d100.4414406214152!3d13.75044469796035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2993f77a8989f%3A0x52365ada28551156!2sBangkok!5e0!3m2!1sen!2sth!4v1726027000000!5m2!1sen!2sth" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </section>
+                <div class="service-card">
+                    <img src="https://i.imgur.com/kS5Y2w7.jpg" alt="บริการดูแลผู้ป่วยติดเตียง">
+                    <div class="service-card-content">
+                        <h3>บริการดูแลผู้ป่วยติดเตียง ทุกสภาพ ไม่จำกัดเพศ ต้องการการพึ่งพิงระยะยาว</h3>
+                        <p>ดูแลอย่างใกล้ชิดตลอด 24 ชั่วโมง พร้อมทีมพยาบาลวิชาชีพเพื่อป้องกันภาวะแทรกซ้อน</p>
+                        <a href="#" class="btn">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://i.imgur.com/0FzQd4i.jpg" alt="บริการฟื้นฟูร่างกาย">
+                    <div class="service-card-content">
+                        <h3>บริการดูแลผู้ที่ต้องการฟื้นฟูร่างกายโดยการทำกายภาพบำบัด</h3>
+                        <p>โปรแกรมกายภาพบำบัดที่ออกแบบเฉพาะบุคคลโดยนักกายภาพบำบัดผู้เชี่ยวชาญ</p>
+                        <a href="#" class="btn">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://i.imgur.com/fM9p4eC.jpg" alt="บริการดูแลหลังออกจากโรงพยาบาล">
+                    <div class="service-card-content">
+                        <h3>บริการดูแลผู้ป่วยพักฟื้น หลังออกจากโรงพยาบาล</h3>
+                        <p>การดูแลต่อเนื่องเพื่อให้ผู้ป่วยฟื้นตัวได้อย่างสมบูรณ์และรวดเร็วในสภาพแวดล้อมที่เหมาะสม</p>
+                        <a href="#" class="btn">ดูรายละเอียด</a>
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </main>
+
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 [ชื่อศูนย์ดูแลผู้สูงอายุของคุณ]. All Rights Reserved.</p>
+            <p>© 2025 [ชื่อศูนย์ดูแลผู้สูงอายุของคุณ]. All Rights Reserved.</p>
         </div>
     </footer>
 
