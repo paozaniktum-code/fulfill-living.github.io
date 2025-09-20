@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    hamburgerMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-    });
+   // ตรวจสอบว่าหา element เจอก่อนจะเพิ่ม event
+    if (hamburgerMenu && mobileMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    }
     
     // Close mobile menu when a link is clicked
     const mobileLinks = document.querySelectorAll('.mobile-menu a');
