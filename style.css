@@ -183,9 +183,9 @@ header .container {
     padding: 0; /* ไม่มี padding เพราะ slider จะเต็มพื้นที่ */
     line-height: 0;
 }
-<!--#hero .container {
+/*---#hero .container {
     line-height: 0; /* ป้องกันการเกิดขอบขาวใต้ภาพ */
-}-->
+} ---*/
 .swiper {
     width: 100%;
     height: 70vh; /* <-- กำหนดความสูงของสไลด์ที่นี่ (70% ของความสูงหน้าจอ) */
