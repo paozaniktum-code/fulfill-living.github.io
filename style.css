@@ -496,11 +496,35 @@ header .container {
     height: 100%;
     border: 0;
 }
-/* --- ปรับแก้ Responsive สำหรับส่วน Contact --- */
+/* --- Responsive Design (ฉบับสมบูรณ์) --- */
+
+/* สำหรับหน้าจอขนาดเล็กกว่า 1024px (แท็บเล็ต) */
 @media (max-width: 1024px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* ทำให้เหลือ 1 คอลัมน์บนจอแท็บเล็ตและมือถือ */
-    }
+    /* จัดเรียงใหม่เป็น 1 คอลัมน์ */
+    .contact-grid { grid-template-columns: 1fr; }
+    .room-grid { grid-template-columns: 1fr; }
+
+    /* จัดเรียงบริการเป็น 2 คอลัมน์ */
+    .services-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* สำหรับหน้าจอขนาดเล็กกว่า 768px (มือถือ) */
+@media (max-width: 768px) {
+    /* ซ่อนเมนูหลัก แสดงปุ่ม Hamburger */
+    .main-nav { display: none; }
+    .hamburger { display: block; }
+
+    /* จัดปุ่ม Top bar ให้อยู่ตรงกลาง */
+    .top-bar .container { justify-content: center; }
+
+    /* ปรับขนาดฟอนต์หัวข้อหลักให้เล็กลง */
+    .section-title { font-size: 2rem; }
+    .intro-title { font-size: 1.8rem; }
+    .intro-promotion h2 { font-size: 1.4rem; }
+    .promo-highlight { font-size: 1.7rem; }
+
+    /* จัดเรียงบริการเป็น 1 คอลัมน์ */
+    .services-page-grid { grid-template-columns: 1fr; }
 }
 
 /* --- Map & Footer --- */
