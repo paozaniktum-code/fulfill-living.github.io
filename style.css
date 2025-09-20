@@ -526,7 +526,14 @@ header .container {
     /* จัดเรียงบริการเป็น 1 คอลัมน์ */
     .services-page-grid { grid-template-columns: 1fr; }
 }
-
+/* --- จัดเรียงปุ่ม Introduction บนมือถือ --- */
+    .intro-buttons {
+        flex-direction: column; /* เปลี่ยนการเรียงเป็นแนวตั้ง */
+        align-items: stretch;   /* ทำให้ปุ่มยืดเต็มความกว้าง */
+    }
+    .btn-intro {
+        justify-content: center; /* จัดไอคอน+ข้อความให้อยู่กลางปุ่ม */
+    }
 /* --- Map & Footer --- */
 #map iframe { display: block; }
 footer {
