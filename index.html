@@ -48,11 +48,34 @@
     </header>
     
     <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html">หน้าแรก</a>
-        <a href="#services">บริการของเรา</a>
-        <a href="#gallery">แกลอรี่</a>
-        <a href="#introduction">เกี่ยวกับเรา</a>
-        <a href="#contact">ติดต่อเรา</a>
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo">
+                <img src="https://i.postimg.cc/NFbrH55N/LOGO-removebg-preview.png" alt="Logo">
+            </a>
+            <button class="close-menu-btn" id="close-menu-btn">&times;</button>
+        </div>
+        
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">หน้าแรก</a></li>
+            
+            <li class="has-submenu">
+                <a href="#">บริการของเรา <i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#services">• บริการทั้งหมด</a></li>
+                    <li><a href="#rooms">• ประเภทห้องพัก</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#gallery">แกลอรี่</a></li>
+            <li><a href="#introduction">เกี่ยวกับเรา</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+        
+        <div class="mobile-menu-footer">
+            <a href="tel:0646262478" class="btn-call-mobile">
+                <i class="fas fa-phone"></i> 064-626-2478
+            </a>
+        </div>
     </div>
 
     <section id="hero">
@@ -298,6 +321,7 @@
     </script>
     
 </body> </html>
+
 
 
 
