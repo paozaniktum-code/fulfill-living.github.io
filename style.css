@@ -711,3 +711,12 @@ footer {
         grid-template-columns: 1fr; /* บนมือถือเหลือ 1 คอลัมน์ */
     }
 }
+/* Visitor Counter Style */
+footer .container {
+    text-align: center;
+}
+
+footer .container a[href*="free-counters.org"] { /* อาจจะต้องเปลี่ยนชื่อเว็บในนี้ถ้าไม่เหมือนเดิม */
+    display: block; 
+    margin-top: 15px; 
+}
