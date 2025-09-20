@@ -178,15 +178,21 @@ header .container {
     background-color: var(--light-bg);
 }
 
-/* --- Hero Section Slider --- */
+/* --- Hero Section Slider (ฉบับแก้ไข) --- */
 #hero {
-    padding: 0; /* ไม่มี padding เพราะ slider จะเต็มพื้นที่ */
-    line-height: 0;
+    padding: 40px 0;
+    background-color: var(--light-bg);
 }
 
 .swiper {
     width: 100%;
-    height: 70vh; /* <-- กำหนดความสูงของสไลด์ที่นี่ (70% ของความสูงหน้าจอ) */
+    border-radius: 15px; /* ทำให้มุมสไลด์มน */
+    box-shadow: var(--shadow); /* เพิ่มเงา */
+    overflow: hidden; /* ซ่อนส่วนเกินของมุม */
+    
+    /* --- กำหนดสัดส่วนให้เหมือนรูปเดิม --- */
+    /* คุณสามารถปรับตัวเลข 720 และ 1280 ได้ตามสัดส่วนรูปของคุณ */
+    aspect-ratio: 1280 / 720; 
 }
 
 .swiper-slide {
@@ -202,12 +208,12 @@ header .container {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* ทำให้รูปภาพเต็มพื้นที่สไลด์โดยไม่เสียสัดส่วน */
+    object-fit: cover;
 }
 
 /* ปรับสีปุ่มและจุด Pagination ให้เข้ากับธีม */
 :root {
-    --swiper-theme-color: var(--sky); /* ใช้สีฟ้าของเว็บเรา */
+    --swiper-theme-color: var(--sky);
 }
 
 /* --- Introduction Section --- */
