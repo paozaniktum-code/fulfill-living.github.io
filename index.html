@@ -246,27 +246,21 @@
         <a href="https://www.facebook.com/Fulfill.Living?rdid=y221HN9BDcyrkeds&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17LxvVHJ2t%2F#" target="_blank" class="fab-item" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <button id="scroll-to-top" class="fab-item" aria-label="เลื่อนขึ้นบนสุด"><i class="fas fa-arrow-up"></i></button>
     </div>
+   
+    <script src="script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
     <script>
       const swiper = new Swiper('.swiper', {
-        // ทำให้สไลด์วนลูป
         loop: true,
-
-        // เล่นอัตโนมัติ
         autoplay: {
-          delay: 5000, // หน่วงเวลา 5 วินาที
+          delay: 5000,
           disableOnInteraction: false,
         },
-
-        // จุด Pagination ด้านล่าง
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
-
-        // ปุ่มลูกศรซ้าย-ขวา
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -274,17 +268,13 @@
       });
     </script>
     
-    <script src="script.js"></script>
-</body>
-    <script src="script.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
     <script>
-        new SimpleLightbox('.gallery-grid a', { captionDelay: 250 });
+      new SimpleLightbox('.gallery-grid a', { captionDelay: 250 });
     </script>
+    
+</body> </html>
 
-</body>
-</html>
 
 
 
