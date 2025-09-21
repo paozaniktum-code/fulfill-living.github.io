@@ -646,3 +646,32 @@ footer .container img[alt*="visitor counter"] {
     display: block;
     margin: 15px auto 0;
 }
+/* --- Social Icons in Contact Section --- */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* ระยะห่างระหว่างไอคอน */
+    margin-top: 25px; /* ระยะห่างจากข้อความด้านบน */
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--sky);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
