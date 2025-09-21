@@ -637,3 +637,12 @@ footer .container a[href*="free-counters.org"] {
         justify-content: center;
     }
 }
+/* --- Visitor Counter Style --- */
+footer .container {
+    text-align: center;
+}
+
+footer .container img[alt*="visitor counter"] {
+    display: block;
+    margin: 15px auto 0;
+}
