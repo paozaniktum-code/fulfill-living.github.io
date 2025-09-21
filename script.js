@@ -36,22 +36,23 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
-// Video Player Functionality
+// Video Player Functionality (Updated for Vimeo)
     const videoContainers = document.querySelectorAll('.video-container');
 
     videoContainers.forEach(container => {
         container.addEventListener('click', () => {
-            const youtubeId = container.getAttribute('data-youtube-id');
-            const iframe = document.createElement('iframe');
-            
-            iframe.setAttribute('src', `https://www.youtube.com/embed/${youtubeId}?autoplay=1`);
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
+            const vimeoId = container.getAttribute('data-vimeo-id'); // <-- เปลี่ยนจาก youtube-id
+            if (vimeoId) { // ตรวจสอบว่ามี vimeo-id จริงๆ
+                const iframe = document.createElement('iframe');
+                
+                // ใช้ลิงก์สำหรับฝังของ Vimeo
+                iframe.setAttribute('src', `https://player.vimeo.com/video/${vimeoId}?autoplay=1`);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', '');
 
-            // ลบรูปภาพและปุ่มกดออก แล้วใส่วิดีโอเข้าไปแทน
-            container.innerHTML = '';
-            container.appendChild(iframe);
+                container.innerHTML = '';
+                container.appendChild(iframe);
+            }
         });
     });
-});
