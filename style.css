@@ -2,7 +2,7 @@
 :root {
     --mint: #86efac;
     --sky: #38bdf8;
-    --dark-blue: #0c4a6e; /* For text */
+    --dark-blue: #0c4a6e;
     --light-bg: #f0f9ff;
     --white: #ffffff;
     --gray: #f3f4f6;
@@ -121,8 +121,7 @@ header .container {
     align-items: center;
 }
 .logo img {
-    height: 70px;
-    display: block;
+    height: 50px;
 }
 .main-nav ul {
     list-style: none;
@@ -148,16 +147,16 @@ header .container {
     color: var(--dark-blue);
 }
 
-/* --- Mobile Menu --- */
+/* --- Mobile Menu (Simple Version) --- */
 .mobile-menu {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 113px;
+    top: 80px; /* Adjusted for larger logo */
     right: 0;
     width: 100%;
     max-width: 300px;
-    height: calc(100vh - 113px);
+    height: calc(100vh - 80px);
     background-color: var(--white);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     transform: translateX(100%);
@@ -178,23 +177,18 @@ header .container {
     background-color: var(--light-bg);
 }
 
-/* --- Hero Section Slider (ฉบับแก้ไข) --- */
+/* --- Hero Section Slider --- */
 #hero {
     padding: 40px 0;
     background-color: var(--light-bg);
 }
-
 .swiper {
     width: 100%;
-    border-radius: 15px; /* ทำให้มุมสไลด์มน */
-    box-shadow: var(--shadow); /* เพิ่มเงา */
-    overflow: hidden; /* ซ่อนส่วนเกินของมุม */
-    
-    /* --- กำหนดสัดส่วนให้เหมือนรูปเดิม --- */
-    /* คุณสามารถปรับตัวเลข 720 และ 1280 ได้ตามสัดส่วนรูปของคุณ */
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
     aspect-ratio: 1280 / 720; 
 }
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -203,15 +197,12 @@ header .container {
     justify-content: center;
     align-items: center;
 }
-
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-/* ปรับสีปุ่มและจุด Pagination ให้เข้ากับธีม */
 :root {
     --swiper-theme-color: var(--sky);
 }
@@ -275,28 +266,63 @@ header .container {
     margin: 40px 0 20px 0;
 }
 .promo-highlight {
-    color: #ef4444; /* สีส้มแดง */
-    font-size: 4.2rem;  /* <-- เพิ่มขนาดตัวอักษร */
-    font-weight: 600; /* <-- เพิ่มความหนา */
-}
-.intro-highlight-box {
-    background-color: #e0f2f1;
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 20px;
-    border-left: 5px solid #14b8a6;
-}
-.intro-highlight-box h3 {
-    font-size: 1.5rem;
-    color: #0d5e68;
-    margin-bottom: 10px;
-}
-.intro-highlight-box p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #333;
+    color: #ef4444;
+    font-size: 2.2rem;
+    font-weight: 600;
 }
 
+/* --- Services Section --- */
+#services {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.service-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.service-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.service-card-content h3 {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+.service-card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.service-card-content .btn {
+    align-self: flex-start;
+    background: var(--dark-blue);
+}
+.service-card-content .btn:hover {
+     background: var(--sky);
+}
 
 /* --- Room Types Section --- */
 #rooms {
@@ -337,6 +363,61 @@ header .container {
     font-size: 1rem;
     line-height: 1.6;
     color: #555;
+}
+
+/* --- Video Section --- */
+#videos {
+    background-color: var(--white);
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.video-container {
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    aspect-ratio: 16 / 9;
+}
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.video-container:hover img {
+    transform: scale(1.05);
+}
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.play-button i {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.video-container:hover .play-button {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* --- Gallery Section --- */
@@ -393,154 +474,107 @@ header .container {
 #contact {
     background-color: var(--white);
 }
-
 .contact-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* แบ่งสัดส่วน 2:1 */
-    gap: 50px; /* เพิ่มระยะห่างระหว่างคอลัมน์ */
-    align-items: flex-start;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: stretch; 
 }
-
+.contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 .contact-form h3 {
     font-size: 1.8rem;
     color: var(--dark-blue);
     margin-bottom: 10px;
 }
-
 .contact-form p {
     margin-bottom: 30px;
     color: #555;
     font-size: 1.1rem;
 }
-
 .form-group {
     margin-bottom: 20px;
 }
-
 .form-group label {
     display: block;
-    margin-bottom: 8px; /* เพิ่มระยะห่าง label */
+    margin-bottom: 8px;
     font-weight: 500;
     color: var(--dark-blue);
 }
-
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 15px; /* เพิ่ม padding ให้น่าใช้งาน */
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* เพิ่มความโค้งมน */
+    border-radius: 8px;
     font-family: var(--primary-font);
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
-
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #aaa;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--sky);
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); /* เพิ่มเงาเมื่อ focus */
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
-
-.contact-details {
-    background-color: var(--light-bg);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #e0f2f1;
+.form-contact-details {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
 }
-
-.contact-details h3 {
-    font-size: 1.8rem;
+.form-contact-details h3 {
+    font-size: 1.5rem;
     color: var(--dark-blue);
     margin-bottom: 20px;
 }
-
-.contact-details p {
-    margin-bottom: 20px; /* เพิ่มระยะห่างแต่ละบรรทัด */
+.form-contact-details p {
+    margin-bottom: 15px;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
-
-.contact-details p i {
+.form-contact-details p i {
     color: var(--sky);
     margin-right: 15px;
     width: 20px;
     font-size: 1.2rem;
 }
-
-.contact-details a {
+.form-contact-details a {
     color: var(--text-color);
     transition: color 0.3s;
 }
-
-.contact-details a:hover {
+.form-contact-details a:hover {
     color: var(--sky);
 }
 .contact-map {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    width: 100%;
-    /* กำหนดสัดส่วนแผนที่ (แนะนำ 16:9) */
-    aspect-ratio: 16 / 9; 
+    aspect-ratio: 16 / 9;
 }
-
 .contact-map iframe {
     width: 100%;
     height: 100%;
     border: 0;
 }
-/* --- Responsive Design (ฉบับสมบูรณ์) --- */
 
-/* สำหรับหน้าจอขนาดเล็กกว่า 1024px (แท็บเล็ต) */
-@media (max-width: 1024px) {
-    /* จัดเรียงใหม่เป็น 1 คอลัมน์ */
-    .contact-grid { grid-template-columns: 1fr; }
-    .room-grid { grid-template-columns: 1fr; }
-
-    /* จัดเรียงบริการเป็น 2 คอลัมน์ */
-    .services-page-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* สำหรับหน้าจอขนาดเล็กกว่า 768px (มือถือ) */
-@media (max-width: 768px) {
-    /* ซ่อนเมนูหลัก แสดงปุ่ม Hamburger */
-    .main-nav { display: none; }
-    .hamburger { display: block; }
-
-    /* จัดปุ่ม Top bar ให้อยู่ตรงกลาง */
-    .top-bar .container { justify-content: center; }
-
-    /* ปรับขนาดฟอนต์หัวข้อหลักให้เล็กลง */
-    .section-title { font-size: 2rem; }
-    .intro-title { font-size: 1.8rem; }
-    .intro-promotion h2 { font-size: 1.4rem; }
-    .promo-highlight { font-size: 1.7rem; }
-
-    /* จัดเรียงบริการเป็น 1 คอลัมน์ */
-    .services-page-grid { grid-template-columns: 1fr; }
-}
-/* --- จัดเรียงปุ่ม Introduction บนมือถือ --- */
-    .intro-buttons {
-        flex-direction: column; /* เปลี่ยนการเรียงเป็นแนวตั้ง */
-        align-items: stretch;   /* ทำให้ปุ่มยืดเต็มความกว้าง */
-    }
-    .btn-intro {
-        justify-content: center; /* จัดไอคอน+ข้อความให้อยู่กลางปุ่ม */
-    }
-/* --- Map & Footer --- */
-#map iframe { display: block; }
+/* --- Footer --- */
 footer {
     background-color: var(--dark-blue);
     color: var(--white);
     text-align: center;
     padding: 20px 0;
+}
+footer .container a[href*="free-counters.org"] {
+    display: block; 
+    margin-top: 15px; 
 }
 
 /* --- Floating Action Buttons --- */
@@ -576,60 +610,6 @@ footer {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* --- Services Page Styles --- */
-#services {
-    padding: 60px 0;
-    background-color: var(--light-bg);
-}
-.services-page-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-.service-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-.service-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-.service-card-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-.service-card-content h3 {
-    font-size: 1.1rem;
-    color: var(--dark-blue);
-    margin-bottom: 10px;
-}
-.service-card-content p {
-    font-size: 0.95rem;
-    color: #555;
-    flex-grow: 1;
-    margin-bottom: 20px;
-}
-.service-card-content .btn {
-    align-self: flex-start;
-    background: var(--dark-blue);
-}
-.service-card-content .btn:hover {
-     background: var(--sky);
-}
-
-
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
     .contact-grid { grid-template-columns: 1fr; }
@@ -638,92 +618,22 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .section-title { font-size: 2rem; }
     .main-nav { display: none; }
     .hamburger { display: block; }
     .top-bar .container { justify-content: center; }
-    .services-page-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 2rem; }
     .intro-title { font-size: 1.8rem; }
     .intro-promotion h2 { font-size: 1.4rem; }
-     .promo-highlight {
-        font-size: 1.7rem; /* ปรับขนาดสำหรับมือถือ */
-         }
-}
-/* --- Video Section --- */
-#videos {
-    background-color: var(--white);
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
-    gap: 30px;
-}
-
-.video-container {
-    position: relative;
-    cursor: pointer;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    aspect-ratio: 16 / 9; /* ทำให้วิดีโอมีสัดส่วน 16:9 */
-}
-
-.video-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.video-container:hover img {
-    transform: scale(1.05);
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.play-button i {
-    color: white;
-    font-size: 3rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.video-container:hover .play-button {
-    background-color: rgba(255, 0, 0, 0.8);
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* --- Responsive for Video Section --- */
-@media (max-width: 768px) {
-    .video-grid {
-        grid-template-columns: 1fr; /* บนมือถือเหลือ 1 คอลัมน์ */
+    .promo-highlight { font-size: 1.7rem; }
+    .services-page-grid { grid-template-columns: 1fr; }
+    .video-grid { grid-template-columns: 1fr; }
+    .intro-buttons {
+        gap: 8px;
     }
-}
-/* Visitor Counter Style */
-footer .container {
-    text-align: center;
-}
-
-footer .container a[href*="free-counters.org"] { /* อาจจะต้องเปลี่ยนชื่อเว็บในนี้ถ้าไม่เหมือนเดิม */
-    display: block; 
-    margin-top: 15px; 
+    .btn-intro {
+        flex: 1;
+        padding: 12px 5px;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
 }
