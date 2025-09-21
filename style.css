@@ -554,14 +554,22 @@ header .container {
     color: var(--sky);
 }
 .contact-map {
+    position: relative; /* < กำหนดให้เป็นจุดอ้างอิง */
+    overflow: hidden;   /* < ซ่อนส่วนของแผนที่ที่ล้นออกไป */
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: var(--shadow);
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* ยังคงสัดส่วนเดิมไว้ */
 }
+
 .contact-map iframe {
-    width: 100%;
-    height: 100%;
+    position: absolute; /* < ทำให้เราสามารถจัดตำแหน่งได้อย่างอิสระ */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* < จัดให้กึ่งกลางของ iframe อยู่กึ่งกลางกรอบ */
+    
+    width: 120%;  /* < ขยายแผนที่ให้ใหญ่กว่ากรอบ */
+    height: 120%; /* < ขยายแผนที่ให้ใหญ่กว่ากรอบ */
+    
     border: 0;
 }
 
